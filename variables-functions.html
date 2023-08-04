@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables y Funciones en CSS</title>
+    <link rel="stylesheet" href="css/variables-functions.css" />
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+  </head>
+  <body>
+    <h1>Variables y Funciones en CSS</h1>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li>
+        <a href="variables-functions.html#custom-properties"
+          >Custom Properties</a
+        >
+      </li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <h2 id="custom-properties" class="title-props">
+      Custom Properties - Variables CSS
+    </h2>
+    <ul>
+      <li>var()</li>
+      <li>url()</li>
+      <li>cal()</li>
+      <li>min()</li>
+      <li>max()</li>
+      <li>clamp()</li>
+    </ul>
+    <h3>Función var()</h3>
+    <article class="article-props">
+      <p>
+        Una custom property o propiedad personalizada es, una vartiable, es
+        decir un espacio reservado en la computadora para almacenar datos.
+        Tienen un alcance o scope en el lugar donde esten definidas, que en el
+        caso de CSS es el selector en el que definamos la declaración de la
+        variable y todos sus elementos subsecuentes. Las variables se tienen que
+        definir dentro de un selector
+      </p>
+      <p>
+        Para definir una variable, hacemos uso de la palabra reservada var y dos
+        paréntesis. Es una función var(), dentro de estos llamamos la variable
+        que queremos usar.
+      </p>
+      <p>
+        Las variables solo existen para los elementos hijos en el ámbito que
+        esta ha sido definida, si queremos usarla fuera de este, no funciona,
+        pero recibe un segundo parámetro que si se aplicará al elemento.
+      </p>
+      <p>
+        Para que las variables puedan existir en todos los elementos HTML,
+        entonces deben ser declaradas en la etiqueta html; usando una
+        pseudoclase llamada root (:root). Esta hace referencia a la etiqueta
+        html, pero tiene mayor peso específico.
+      </p>
+      <p>
+        Las variables también pueden ser definidas en la etiqueta style de HTML.
+      </p>
+    </article>
+    <article class="custom-props-1">
+      <section class="custom-props-2" style="--border-color: red">
+        <div class="custom-props-3">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum,
+          blanditiis. Veritatis maiores, nemo corporis quaerat accusamus
+          molestiae non nihil repudiandae enim sint, eos consequatur recusandae
+          cupiditate animi dignissimos quam modi.
+        </div>
+      </section>
+    </article>
+    <h3>Función url()</h3>
+    url(https://youtube.com)
+    <p>
+      Esta función sirve para especificar la ruta donde se encuentra el origen
+      de lo que queremos cargar.
+    </p>
+    <h3>Función cal()</h3>
+    <p>
+      Esta función permite hacer calculos matemáticos. Es muy importante dejar
+      el espacio correspondiente entre los operadores, de otra forma la función
+      no va a a funcfionar de manera correcta.
+    </p>
+    <div class="ch-10">0123456789</div>
+    <h3>Función min() & max()</h3>
+    <div class="min-max">Funciones min() & max()</div>
+    <p>
+      Las funciones min() & max() toma como parámetros dos o más valores y
+      utiliza uno de ellos según las condiciones del viewport, cuando esta
+      condición cambia toma el siguiente parámetro. La función mínimo tomará el
+      menor parámetro, hasta que la circunstancia de la pantalla requiera que
+      tome el mayor. La función maximo hará lo contrario.
+    </p>
+    <p>
+      Los valores siempre deben estar separados por comas y pueden ser
+      múltiples.
+    </p>
+    <h3>Función clamp()</h3>
+    <p>
+      Toma en primer lugar el tamaño mínimo, después toma el tamaño ideal, y por
+      último el tamaño máximo. Siendo un buen complemento para min(), max().
+    </p>
+    <p>la función clamp, tambien permite hacer cálculos.</p>
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

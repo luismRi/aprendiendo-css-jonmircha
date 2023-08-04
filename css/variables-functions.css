@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*Custom properties*/
+:root {
+  --default-bg-color: skyblue;
+}
+.custom-props-1 {
+  --primary-color: gray;
+  --font-size: 32px;
+  background-color: var(--primary-color);
+}
+.custom-props-2 {
+  background-color: var(--default-bg-color);
+  border: thin solid var(--border-color);
+  padding: 10px;
+}
+.custom-props-3 {
+  font-size: var(--font-size);
+  border: thin solid var(--border-color);
+}
+.title-props {
+  --primary-color: navy;
+  color: var(--primary-color, orange);
+}
+/*Función cal()*/
+.ch-10 {
+  --padding-size: 2ch;
+  --num-ch: 10ch;
+  background-color: var(--default-bg-color);
+  font-size: 2rem;
+  padding: var(--padding-size);
+  width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+/*Funcion min() max()*/
+.min-max {
+  background-color: var(--default-bg-color);
+  margin-top: 1rem;
+  width: min(300px, 20vw);
+  height: max(200px, 25vh);
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}

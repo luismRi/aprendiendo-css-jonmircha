@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bordes Y Outlines</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/border-outline.css" />
+  </head>
+  <body>
+    <h1>Bordes y Outlines</h1>
+    <h3 id="inicio">Temario de la Sección</h3>
+    <ul>
+      <li><a href="border-outline.html#border">Border - Radius</a></li>
+      <li><a href="border-outline.html#outlines">Outlines</a></li>
+    </ul>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+    <h2 id="border">Border - Radius</h2>
+    <p>
+      Border-radius es una propiedad que permite redondear las esquinas de los
+      bordes de la caja en cuestion.
+    </p>
+    <p>
+      Con el short-hand border-radius, a un solo valor, redondea las cuatro
+      esquinas, pero si no esto puede ir redondeándose de a pares y a tres
+      valores (El primer valor será para la esquina superior izquierda, el
+      segundo para las diagonales superios derecha e inferior izquierda y el
+      tercer valor será para la esquina inferior derecha).
+    </p>
+    <p>
+      Con las distintas propiedades por separado, vamos redondeando las esquinas
+      (border-top-left-radius; border-bottom-right-radius; etc).
+    </p>
+    <div class="border-radius"></div>
+    <p>
+      Caja con bordes redondeados con las propiedades border-radius por
+      separado, todos a distintas medidas.
+    </p>
+    <div class="border-for-4"></div>
+    <p>
+      Al poner la propiedad de border-radius al 50% obtenemos un círculo
+      perfecto.
+    </p>
+    <div class="border-round"></div>
+    <p>
+      Si podemos hacer un círculo perfecto, entonces también podemos hacer una
+      elipse.
+    </p>
+    <div class="border-elipsis"></div>
+    <p>
+      Para hacer un borde elíptico, aplicamos una barra diagonal / entre los dos
+      valores en cuestión.
+    </p>
+    <p>
+      De la misma forma podemos ir expresandolos de a parejas de valores,
+      siempre separados por una barra diagonal /.
+    </p>
+    <p>
+      Cuando queremos generar una elipse perfecta, simplemente le damos medida a
+      la caja para que, en vez de ser un cuadrado, sea un rectángulo, y al poner
+      border-radius 50% obtendremos una elipse pefecta.
+    </p>
+    <div class="perfect-elipsis"></div>
+    <div class="perfect-elipsis-1"></div>
+    <a href="border-outline.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="outlines">Outlines</h2>
+    <p>
+      Los outlines son bordes externos. Esta propiedad no pertenece al modelo de
+      caja.
+    </p>
+    <p>Outlines funciona con propiedades widht, style y color.</p>
+    <div class="box outline">Outline</div>
+    <p>
+      Como outline no forma parte del box-model, cuando uno le aplica distintas
+      propiedades, estan no afectan a la caja, mientras que el borde si.
+    </p>
+    <p>
+      Cuando aplicamos outline offset, la línea de borde se alejará todo el
+      valor que nosotros le indiquemos.
+    </p>
+    <p>
+      Si indicamos valores negativos, la líne de outline se contraerá dentro de
+      la caja.
+    </p>
+    <p>
+      Hay elementos como los inputs que, naturalmente tienen propiedad de
+      outline.
+    </p>
+    <div class="box outline-offset"></div>
+    <a href="border-outline.html#inicio">Inicio</a>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+  </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de Caja en CSS</title>
+    <link rel="stylesheet" href="css/box-model.css" />
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+  </head>
+  <body>
+    <article>
+      <h1 id="inicio">Modelo de Caja en CSS</h1>
+      <h3>Temario</h3>
+      <ul>
+        <li><a href="box-model.html#border">Bordes</a></li>
+        <li><a href="box-model.html#padding-margin">Padding y Margin</a></li>
+        <li>
+          <a href="box-model.html#tipos-caja"
+            >Cajas de Linea vs Cajas de Bloque</a
+          >
+        </li>
+        <li><a href="box-model.html#display">Propiedad Display</a></li>
+        <li><a href="box-model.html#visibilidad">Propiedad Visivility</a></li>
+        <li><a href="box-model.html#overflow">Propiedad Overflow</a></li>
+        <li><a href="box-model.html#tamanio-caja">Tamaño de la Caja</a></li>
+        <li>
+          <a href="box-model.html#float-clear">Propiedad de Float & Clear</a>
+        </li>
+        <li>
+          <a href="box-model.html#colapso-margenes"
+            >Colapso de márgenes Verticales</a
+          >
+        </li>
+        <li><a href="box-model.html#centrado-cajas">Centrado de Cajas</a></li>
+        <li>
+          <a href="box-model.html#margin-negative">Anexo margenes Negativos</a>
+        </li>
+      </ul>
+      <a href="index.html#inicio">🚀</a> <br />
+      <img src="assets/multimedia/PeriodicTables_thumb3.webp" />
+      <p>
+        El modelo de caja o box model es algo básico y fundamental, pues se
+        trata de como Css interpreta las etiquetas HTML. Las etiquetas pueden
+        ser caja de línea o de bloque.
+      </p>
+      <p>
+        El modelo de caja en CSS está compuesto por un margen (margin), que son
+        las distancias externas, entre el borde de la caja y las etiquetas HTML
+        vecinas. Un borde (border), un relleno (padding), que son las distancias
+        internas o distancias entre el borde y el contenido. Y por fin, el
+        contenido del a etiqueta HTML, que en su mayoría es texto y toma en
+        cuenta sus dimensiones.
+      </p>
+      <ol>
+        <li>Content</li>
+        <li>Border</li>
+        <li>Padding</li>
+        <li>Margin</li>
+      </ol>
+      <p>
+        Como toda caja, estan compuestas por cuatro lados: top (arriba), right
+        (derecha), bottom (abajo) y left (izquierda). Y siempre se va contando
+        como se mueven las manecillas de un reloj.
+      </p>
+      <p>
+        El contenido del box en CSS tiene un Width (ancho) y un high (alto) que
+        disminuyen o aumentan conforme se va haciendo más chico o grande el
+        vieport (pantalla).
+      </p>
+      <h2 id="border">Bordes</h2>
+      <p>
+        Rodea y limita el contenido de la caja, tiene tres propiedades:
+        border-color, border-width y border-style, de manera que el borde puede
+        tener un color, ancho y estilo en particular que, si no los definimos el
+        navegador dará por defecto. Tambien cada propiedad tiene distintas
+        formas de ser aplicada: podemos llamar a los colores por sus distintas
+        formas (colores del sistema, RGB hexadecimal, RGB numérico, RGB
+        porcentual). Al ancho por algun tipo de medida(px, rem, ) o por las
+        medidas inherentes en la propiedad (thin o delgado, thik o grueso) y los
+        estilos puden ser dashed (punteado), double (doble), etc.
+      </p>
+      <p>
+        Estas son propiedades de tipo shorthand notation (notación abreviada) es
+        decir que se aplican en todos los lados del borde de la caja. Podemos
+        aplicar estilos distintos a cada lado del borde: top, right, bottom y
+        left tanto en color, ancho y estilo. Asimismo si solo ponemos border: y
+        vamos espaciando cada propiedad, tendremos los estilos de una forma aun
+        más abreviada.
+      </p>
+      <p id="p-border">Esto es un parrafo para ejemplificar los bordes</p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="padding-margin">Padding y Margin</h2>
+      <p>
+        Son propiedades muy similares, la diferencia es que una se aplica hacia
+        afuera del contenido y es el espacio que separa a este de los contenidos
+        vecinos, y la otra son los espacios internos que definimos desde el
+        borde que puede no estar definido, hacia adentro del contenido mismo. Si
+        no los definimos, el navegador aplica las que vienen definidas por
+        defecto.
+      </p>
+      <div class="caja-uno">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea natus velit
+        nam fugit placeat similique sed nemo quisquam ipsum eligendi.
+        Necessitatibus id molestiae obcaecati cupiditate consectetur quam
+        aspernatur placeat. Accusantium.
+      </div>
+      <div class="caja-dos">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea natus velit
+        nam fugit placeat similique sed nemo quisquam ipsum eligendi.
+        Necessitatibus id molestiae obcaecati cupiditate consectetur quam
+        aspernatur placeat. Accusantium.
+      </div>
+      <p>
+        A las div (las div no tienen margen ni relleno por defecto) de ejemplo
+        le aplicamos un padding (distancia interior) de 10 pixeles, y un margin
+        (distancia hacia los lados) de 20 pixeles y es por eso que las cajas se
+        van corriendo, adaptandose a las nuevas medidas.
+      </p>
+      <p>
+        Hay varias formas de aplicar los valores que son iguales tanto para
+        padding como para margin: cuando aplicamos un valor, se aplica en los
+        cuatro lados, cuando aplicamos dos valores, los primeros se aplican para
+        los valores verticales top y bottom, y el segundo valor es para los
+        horizontales rigth y left.
+      </p>
+      <div class="caja-tres">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dicta.
+        Architecto nobis cum rerum, quo ullam quaerat voluptates, vel aut
+        excepturi quae molestias amet facilis tenetur delectus dicta sapiente
+        voluptatem?
+      </div>
+      <p>
+        Tambien podemos aplicar los estilos a tres valores: el primer valor es
+        para top, el segundo es para los lados right y left y el tercer valor es
+        para bottom (se conoce como rombo).
+      </p>
+      <div class="caja-cuatro">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dicta.
+        Architecto nobis cum rerum, quo ullam quaerat voluptates, vel aut
+        excepturi quae molestias amet facilis tenetur delectus dicta sapiente
+        voluptatem?
+      </div>
+      <p>
+        Margin y Padding aplicado a cuatro valores: tal como se mueven las
+        manecillas del reloj el primer valor es para top (las 12), rigth (las
+        3), bottom (las 6) y left (las 9).
+      </p>
+      <div class="caja-cinco">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dicta.
+        Architecto nobis cum rerum, quo ullam quaerat voluptates, vel aut
+        excepturi quae molestias amet facilis tenetur delectus dicta sapiente
+        voluptatem?
+      </div>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="tipos-caja">Cajas de Linea vs Cajas de Bloque</h2>
+      <h3>Cajas de linea</h3>
+      <p>
+        Las cajas de linea ocupan el espacio necesario para mostrar su
+        contenido, no tienen dimensiones modificables (alto y ancho), permiten
+        otros elementos a su lado. Padding y margin solo empujan a sus elementos
+        adyacentes en horizontal, <b>nunca en vertical</b>.
+      </p>
+      <h3>Cajas de Bloque</h3>
+      <p>
+        Las cajas de bloque ocupan todo el ancho del viewport, lo que genera
+        saltos de linea; tienen dimensiones modificables (alto y ancho), no
+        permiten otros elementos a su lado (aunque este especifique un ancho,
+        siguen ocupando todo el espacio disponible) generando saltos de linea.
+      </p>
+      <span class="caja-linea">Esto es una Caja de Linea</span>
+      <span>Esto es una segunda caja de linea</span>
+      <div class="caja-bloque">Esto es una Caja de Bloque</div>
+      <p>
+        La caja de bloque div, si respeta todas las dimensiones, mientras que la
+        caja de bloque span, solo se mueve hacia los costados y no hacia arriba
+        o abajo, llegando incluso a interponerse con otros elementos porque no
+        se corre.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="display">Propiedad Display</h2>
+      <p>
+        La propiedad display hace que las cajas cambien el comportamiento, de
+        manera que un elemento de linea lo se comporte como uno de bloque y a la
+        inversa. Display (mostrar) le indica a un elemento HTML como debe
+        mostrarse, como se va a visualizar. Display hace que los elementos se
+        comporten de manera diferente a su naturaleza, incluso que no se
+        muestren con un valor "display: none".
+      </p>
+      <h3>Principales valores de la propiedad Display:</h3>
+      <ul>
+        <li>inline</li>
+        <li>block</li>
+        <li>inline-block</li>
+        <li>none</li>
+        <li>table</li>
+        <li>list-item</li>
+        <li>flex</li>
+        <li>grid</li>
+      </ul>
+      <p>
+        inline-box Hace que se comporte como un elemento de linea, pero acepta
+        modificar sus dimensiones alto y ancho. Flex y grid son propiedades que
+        merecen ser estudiadas detenidamente pues tienen muchas caracteristicas
+        que sirven para la maquetación de un Documento.
+      </p>
+      <span class="display-block">Esto es una Caja de Linea</span>
+      <div class="display-linea">Esto es una Caja de Bloque</div>
+      <p>
+        Aplicando propiedad display-block al elemento de line y display-inline
+        al elemento de bloque.
+      </p>
+      <div class="caja-none">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+        corporis perferendis, est ratione temporibus veritatis officia iusto
+        eius eligendi inventore aliquam voluptas voluptatem quaerat vero ipsam
+        ut, fugiat quidem eos?
+      </div>
+      <span>Esto es un span</span>
+      <span class="caja-linea-bloque">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente hic
+        eum nam. Velit, ducimus blanditiis non libero a repellat expedita
+        tenetur tempora iusto reprehenderit praesentium deserunt quo. Maiores,
+        repudiandae ipsam.
+      </span>
+      <span>Esto es otro span</span>
+      <p>
+        Las dos cajas tienen un comportamiento distinto a medida que se le van
+        aplicando los estilos, pues una es de bloque y la otra es de linea,
+        cuando a la caja de linea se le aplica un comportamiento "inline-block",
+        se asemeja a la caja de bloque, sin embargo sigue tolerando otros
+        elementos en su linea, mientras que la div del primer lugar no permite a
+        la etiqueta span a su lado, estas se corren a la misma linea que la span
+        de abajo.
+      </p>
+      <p>
+        Con display:none, la caja se oculta automaticamente, pero sigue
+        cargándose en ewl Documento. Esta propiedad se usa para ocultar o
+        mostrar ciertos elementos de forma interactiva, dependiendo de las
+        acciones que vaya haciendo el usuario, y se pueden activar con
+        JavaScript.
+      </p>
+      <p>
+        Las propiedades de list-item y table, son propias de las listas y tablas
+        y muy rara vez habría que aplicarlas a otro tipo de elementos.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="visibilidad">Propiedad Visibility</h2>
+      <p>Esta no se debe confundir con el display de visualización</p>
+      <div class="caja-none-invisible">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+        corporis perferendis, est ratione temporibus veritatis officia iusto
+        eius eligendi inventore aliquam voluptas voluptatem quaerat vero ipsam
+        ut, fugiat quidem eos?
+      </div>
+      <div class="caja-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+        corporis perferendis, est ratione temporibus veritatis officia iusto
+        eius eligendi inventore aliquam voluptas voluptatem quaerat vero ipsam
+        ut, fugiat quidem eos?
+      </div>
+      <p>
+        Con la propiedad "none", el elemento se oculta pero pierde el lugar que
+        ocupa en el Documento, pero a veces cuando hay algun tipo de necesidad
+        de ocultarlo y además conservar el espacio: en este caso entre el
+        párrafo de arriba y el de abajo hay dos div, la primera con propiedad
+        display none ha perdido totalmente el lugar, y la segunda con propiedad
+        de visibility: hidden conserva el espacio en el documento. La propiedad
+        de visibility y como quitarle opacidad, llevando esta hasta cero.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="overflow">Propiedad Overflow</h2>
+      <p>
+        La propiedad de overflow es como su nombre lo indica (desbordamiento en
+        ingles) la de desborder.
+      </p>
+      <p class="overflow">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+        architecto quia vero. Praesentium, corporis, nobis ipsum fuga facilis
+        quis labore atque reiciendis eos asperiores recusandae ipsam a, esse in
+        quidem.
+      </p>
+      <p>
+        Las principales propiedades de overflow son: visible, que hace que el
+        contenido se vea, aunque desborde de la caja; hidden que hace que el
+        contenido que desborda se oculte; scoll que le da barras de
+        desplazamiento horizontal y vertical y auto, que hace que solo se
+        visualice la barra necesaria. Tambien se puede identificar un overflow
+        para "x" e "y".
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="tamanio-caja">Tamaño de la Caja</h2>
+      <p>
+        La propiedad se llama box-sizing, es decir tamaño de caja que defini
+        como el alto y el ancho de la caja es calculado. Su valor por defecto es
+        content-box, es decir desde el contenido
+      </p>
+      <div class="box-sizing-content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, nisi
+        pariatur magnam officia sint quia cum esse. Recusandae maxime sunt ea
+        quisquam dolorum in? Neque facilis similique necessitatibus minus hic.
+      </div>
+      <p>
+        Al agregar un padding a los cuatro lados de 10 pixeles a una caja de
+        cierto tamaño, estos se agregan al tamaño de la caja, por lo que ersta
+        ya no tendrá las medidas originales, sino que medirá 20 pixeles más por
+        alto y 20 pixeles más por ancho. Lo mismo pasa con el borde, sus medidas
+        se suman al tamaño original de la caja, es decir que un borde thick que
+        tiene 5 pixeles le agregará 10 pixeles más en su alto y 10 en su ancho.
+        Así por ejemplo nuestra caja que originalmente tenía 500 pixeles por 250
+        pixeles, ahora tendrá 530 por 280. <br />
+        Ancho: 500 + 10 + 10 + 5 + 5 = 530 pixeles. <br />
+        Alto: 250 + 10 + 10 + 5 + 5 = 280 pixeles.
+      </p>
+      <div class="box-sizing-border">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, nisi
+        pariatur magnam officia sint quia cum esse. Recusandae maxime sunt ea
+        quisquam dolorum in? Neque facilis similique necessitatibus minus hic.
+      </div>
+      <p>
+        La segunde caja disminuyó su tamaño a pesar que se aplicaron los mismos
+        estilos en las dos, la diferencia es que en su box-sizing su valor es de
+        content-border que hace que el tamaño real de la caja (de 500 x 250). El
+        tamaño real se aplica desde el borde.
+      </p>
+      <article class="container-col-3">
+        <section class="item">Sección 1</section>
+        <section class="item">Sección 2</section>
+        <section class="item">Sección 3</section>
+      </article>
+      <p>
+        A las secciones de 600 pixeles en total se le dio 200 para cada una y
+        para que puedan ponerse en horizontal y ocupar el valor real asignado se
+        asignó una propiedad float: left (flotar a la izquierda). Si uno le
+        asigna un borde con esas medidas, se estará pasando de las originales,
+        pues el border como recordamos tiene su propia medida haciendo que se
+        desborde, por lo que para compensar esto podemos sumarlo al contenedor
+        padre, restarlo de cada contenedor hijo. pero esto haría que haya que
+        hacer una operación matemática cada vez que se define una nueva caja.
+        Esto se soluciona de una forma sencilla con un box-sizing: border-box.
+      </p>
+      <p>
+        Para simplificar esto anu más usamos la técnica natural creada y
+        propuesta por Paul Irish. Este es un código de reseteo que idealmente se
+        pone al inicio de la hoja de estilos junto a los otros reseteos. Esta
+        técnica se trata de aplicar un modelo de diseño de caja natural a todos
+        los elementos, pero permitiendo que los componentes cambien.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="float-clear">Propiedad de Float & Clear</h2>
+      <h3>Propiedad Float</h3>
+      <p>
+        La propiedad float nos permite flotar a la izquierda o hacia la derecha
+        elementos. Cuando aplicamos alguno de los dos tipos de valores, la
+        etiqueta tratará de buscar el espacio correspondiente que tenga a su
+        disposición, dependiendo lógicamente si se trata de un elemento de linea
+        o de bloque. Actualmente este tipo de técnica está en desuso y se
+        considera mala práctica, pues a sido suplantada por flex y gridd. El
+        problema consta en que al flotar los elementos puede haber un problema
+        de super posición.
+      </p>
+      <article class="container-float">
+        <section class="float-right">Este elemento a la derecha</section>
+        <section class="float-left">Este elemento flota a la izquierda</section>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          quae tempora sint doloremque ratione, magni cupiditate voluptas
+          sapiente consequuntur, sed minima! Alias sed quis harum repellendus
+          iure eos amet laudantium.
+        </section>
+      </article>
+      <p>
+        Cuando flotamos un elemento sale de la disposición natural de HTML. A
+        medida que se van creando las etiquetas se van apilando a lo largo del
+        Documento: Cuando una etiqueta se sale de este flujo, pierde las
+        propiedades adquiridas de ante mano. Es por eso que en el articulo de
+        ejemplo, las secciones se tratan de acomodar y pueden pierder su
+        propiedad.
+      </p>
+      <h3>Propiedad Clear</h3>
+      <p>
+        La propiedad clear sirve para solucionar los problemas ocasionados pro
+        las flotaciones limpiando los efectos de los elementos flotados, tiene
+        los mismos valores de la flotacion, right, left y adicionalmente clear
+        both, que es la que limpia a la derecha o izquierda. Se pone entre los
+        elementos una div vacía con la clase de clearfix que arregla el problema
+        de flotación, pero dejar un elemento HTML vacío es muy mala práctica
+      </p>
+      <article class="container-float">
+        <section class="float-right">Este elemento a la derecha</section>
+        <section class="float-left">Este elemento flota a la izquierda</section>
+        <div class="clearfix"></div>
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          quae tempora sint doloremque ratione, magni cupiditate voluptas
+          sapiente consequuntur, sed minima! Alias sed quis harum repellendus
+          iure eos amet laudantium.
+        </section>
+      </article>
+      <p>
+        Vemos como al hacer uso de la propiedad clar:both, efectivamente se la
+        ha dado solución al problema de la flotación.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="colapso-margenes">Colapso de márgenes Verticales</h2>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          totam magni suscipit impedit velit officia numquam eius, aliquid
+          incidunt temporibus? Sed, reiciendis voluptates odio dolor odit eos in
+          alias velit!
+        </p>
+      </div>
+      <article class="margin-collapse">
+        <section>Sección 1</section>
+        <section>Sección 2</section>
+        <section>
+          <span>Span 1</span><span>Span 2</span><span>Span 3</span>
+        </section>
+      </article>
+      <p>
+        Al haber un margin top de 16 pixeles y un margin bottom de 16 pixeles,
+        es lógico pensar que tendría ha haber una separación de 32 pixeles entre
+        las dos secciones, lo que ocurre en realidad es que, hay una regla en
+        CSS que dice que cuando hay dos margenes verticales de elementos, estos
+        se van a acoplar, encimándose. Para evitar este tipo de conflictos es
+        recomendable usar solo un tipo de estas propiedades, top o bottom.
+      </p>
+      <h3>Adición de Márgenes Horizontales</h3>
+      <p>
+        En el caso de los márgenes horizontales, si se suman sin generar
+        conflictos.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="centrado-cajas">Centrado de Cajas</h2>
+      <p>
+        Esta propiedad no se resume a solamente centrar el contenido de la caja.
+        No debemos confundir con centrar el contenido de la caja
+        (tex-align:center), sino al centrado de la página con respecto a la
+        ventana del navegador, que se logra con poner un margin-left y un
+        margin-right con valor en auto. Si solo hacemos uno de los dos margin,
+        el contenido va a ser empujado totalmente automáticamente hacia el lado
+        correspondiente.
+      </p>
+      <article class="sitio-web">
+        <header>Cabecera</header>
+        <main>Contenido Principal</main>
+        <footer>Pie de Página</footer>
+      </article>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="margin-negative">Anexo Margenes Negativos</h2>
+      <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, natus
+        dicta eius soluta quae vel perspiciatis, dolores, aut illum voluptatum
+        aliquid earum voluptas architecto laudantium sunt animi veniam est
+        possimus!
+      </div>
+      <p>
+        Podemos aplicar margenes negativos, pero no padding. solamente podemos
+        aplicar valores negativos a las distancias externas, que en este caso
+        son los margin.
+      </p>
+      <a href="box-model.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

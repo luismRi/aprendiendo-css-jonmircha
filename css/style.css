@@ -1,0 +1,220 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+p {
+  color: midnightblue;
+}
+#parrafo-dos {
+  background-color: skyblue;
+}
+.text-32 {
+  font-size: 32px;
+}
+.text-20 {
+  font-size: 20px;
+}
+.color-white {
+  color: white;
+}
+.bg-skyblue {
+  background-color: skyblue;
+}
+.bg-steelblue {
+  background-color: steelblue;
+}
+.border {
+  border: thin solid black;
+  padding: 1px;
+}
+.hijos-directos > li {
+  background-color: thistle;
+}
+.hijos-descendientes b {
+  background-color: thistle;
+}
+.hermanos-general ~ li {
+  background-color: thistle;
+}
+.hermanos-adyacente + li {
+  background-color: thistle;
+}
+.selectores-atributos a[href] {
+  color: orangered;
+}
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+.selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+}
+.selectores-atributos a[href^="http:"] {
+  text-decoration: none;
+}
+.selectores-atributos a[href$=".com"] {
+  background-color: black;
+}
+.selectores-atributos a[class~="cursos"] {
+  background-color: steelblue;
+}
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+.selector-universal * {
+  font-size: 24px;
+}
+.form-pseudoclases *:required {
+  border-color: blue;
+}
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+.form-pseudoclases *:focus {
+  background-color: skyblue;
+}
+.menu-pseudoclases a:visited {
+  color: green;
+}
+.menu-pseudoclases a:hover {
+  color: orange;
+}
+.p-pseudoclases:hover {
+  font-size: 20px;
+}
+#inicio:target {
+  background-color: lightgreen;
+}
+.lista-pseudoclase li:first-child {
+  color: green;
+}
+.lista-pseudoclase li:last-child {
+  color: violet;
+}
+.lista-pseudoclase li:nth-child(3) {
+  color: navy;
+}
+.lista-pseudoclase li:nth-child(4n) {
+  font-size: 20px;
+}
+.lista-pseudoclase li:nth-child(3n + 1) {
+  font-weight: bold;
+}
+.lista-pseudoclase li:nth-child(even) {
+  background-color: green;
+}
+.lista-pseudoclase li:nth-child(odd) {
+  background-color: pink;
+}
+.articulo-pseudoclase p:first-of-type {
+  background-color: pink;
+}
+.articulo-pseudoclase p:last-of-type {
+  background-color: violet;
+}
+.articulo-pseudoclase p:nth-of-type(3) {
+  background-color: fuchsia;
+}
+.articulo-pseudoclase *:not(p) {
+  background-color: beige;
+}
+.saga-geminis::before {
+  content: "🤼‍♂️";
+}
+.saga-geminis::after {
+  content: "♊";
+}
+.saga-precio::before {
+  content: "$";
+  font-weight: bold;
+}
+.saga-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+.p-pseudoelemento::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+.p-pseudoelemento::first-line {
+  color: coral;
+}
+.p-pseudoelemento::selection {
+  color: green;
+  background-color: black;
+}
+.input-pseudoelemento::placeholder {
+  color: green;
+  background-color: aquamarine;
+}
+/*Agrupar Selectores*/
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+  border-color: blueviolet;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: black;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+}
+blockquote#cita-marco.cita-marco {
+  background-color: lightskyblue;
+}
+blockquote {
+  background-color: burlywood;
+}
+#cita-marco {
+  background-color: lightgreen;
+}
+blockquote.cita-marco {
+  background-color: tomato;
+}
+.cita-marco {
+  background-color: cornflowerblue;
+}
+blockquote#cita-marco {
+  background-color: palevioletred;
+}
+.cita-marco {
+  background-color: aquamarine !important;
+  font-size: 24px;
+  border-style: double;
+  border-color: violet;
+}
+.cita-marco cite {
+  background-color: pink;
+  font-size: initial;
+  background-color: inherit;
+  border-style: inherit;
+}

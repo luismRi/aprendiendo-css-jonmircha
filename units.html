@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades de Medida en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/units.css" />
+  </head>
+  <body>
+    <h1>Unidades de Medida en CSS</h1>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li><a href="units.html#introduction">Introduccion Unidades de medida</a></li>
+      <li><a href="units.html#pixeles">Unidad de Pixeles</a></li>
+      <li><a href="units.html#relative-units">Unidades Relativas al Tamaño de la Fuente</a></li>
+      <li><a href="units.html#persents-relative">Porcentajes relativos al Contenedor</a></li>
+      <li><a href="units.html#viewport-units">Unidades del Viewport</a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <article>
+      <h2 id="intoduction">Introducción Unidades de Medida.</h2>
+      <p>
+        <ol>
+          <li>
+            Absolutas: su valor no cambia, son unidades del mundo real. <br>
+             pc, cm, mm, in, Q. <br>
+            pt - punto (1/72in) <br>
+            px - pixel (1/96in) </li>
+          <li>
+            Relativas: Su valor es relativo a un contexto <br>
+            em, rem, ex, ch - hacen referecia al tamaño de la fuente. <br>
+            em - Basada en la anchura de la "m" de la fuente del elemento. <br>
+            rem - Basada en la anchura de la "m" de la fuente del elemento raíz (HTML). <br>
+            ex - Basada en la altura de la "x" de la fuente del elemento. <br>
+            ch - Basada en la altura del "0" de la fuente del elemento. <br>
+            % - Al tamaño del elemento contenedor.
+          </li>
+          <li>
+            vw, vh, vmin, vmax - hacen referencia al tamaño del viewport. <br>
+            vw - Ancho del viewport de 1 al 100. <br>
+            vh - Alto del viewport del 1 al 100. <br>
+            vmin - Entre vw y vh toma el que tenga menor valor. <br>
+            vmax - Entre el vw y vh toma el que tenga mayor valor.
+          </li>
+        </ol>
+        La conversión entre unidades de medidas la hayamos en - <a href="http://pxtoem.com/" target="_blank">https://pxtoem.com</a>
+      </p>
+    </article>
+    <a href="units.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="pixeles">Unidad de Pixeles</h2>
+    <p>
+      Un pixel es la 96 aba parte de una pulgada, es una medida del mundo real.
+    </p>
+    <div class="pixels">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima magni facere excepturi doloribus magnam. Neque repellat rem nemo sapiente cum doloribus ratione nostrum, nulla fugiat magnam at nisi cumque.</p>
+    </div>
+    <p>
+      En nuetra caja de prueba, todas las medidas están expresadas en pixeles. Es la Unidad de medida más usada y las que el navegador lee por defecto.
+    </p>
+    <p>
+      16 pixeles es la unidad base que los navegadores ponen por defecto, pero en la medida de lo posible, es mejor usar medidas de medida relativas para determinar el tamaño de la letra para que se adapte a cualquier tipo de viewport (responsive design). El contenido se tiene que ir adaptando, dependiendo del dispositivo que lo consuma.
+    </p>
+    <a href="units.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="relative-units">Unidades Relativas al Tamaño de la Fuente</h2>
+    <h3>Unidad - em</h3>
+    <p>
+      Un em equivale a 16 pixeles.
+    </p>
+    <div class="ems">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima magni facere excepturi doloribus magnam. Neque repellat rem nemo sapiente cum doloribus ratione nostrum, nulla fugiat magnam at nisi cumque.</p>
+      <section class="ems-child">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis neque incidunt autem nisi maxime, et hic magnam cupiditate ad magni, porro ratione harum obcaecati veniam iusto, dicta explicabo in fugiat.
+        </p>
+      </section>
+    </div>
+      <br><br>
+    <div class="normal-size">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolor, a maxime consectetur accusamus, commodi culpa vitae harum molestiae rerum hic esse. Laboriosam, iusto velit rem repellendus tempora perspiciatis atque.
+      </p>
+    </div> 
+    <p>
+        La primer caja de prueba, el tamaño de la letra es de 24 pixeles. Si uno modifica el tamaño de la letra, las siguientes medidas en em que se apliquen dentro del elemento contenedor, se adaptaran a esta nueva medida. Por lo que el tamaño de la letra de la caja hija de 2em, se fue a cuatro veces el tamaño que la de la caja normal, y el tamaño de letra por  defecto de los navegadores.
+      </p>
+      <p>
+        Toma como referencia el tamaño de letra de su caja contenedora padre que tiene un tamaño de letra de 24 pixeles, y eso se convierte en 1em para la caja hija.
+      </p>
+      <h3>Unidad - rem</h3>
+      <p>
+        rem hace referencia al root em, es decir es un em que toma como referencia a la raíz de la etiqueta HTML (no al body). Siempre está basado en el tamaño de la fuente que tenga el elemento HTML.
+      </p>
+      <div class="rems">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima magni facere excepturi doloribus magnam. Neque repellat rem nemo sapiente cum doloribus ratione nostrum, nulla fugiat magnam at nisi cumque.</p>
+      <section class="rems-child">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis neque incidunt autem nisi maxime, et hic magnam cupiditate ad magni, porro ratione harum obcaecati veniam iusto, dicta explicabo in fugiat.
+        </p>
+      </section>
+    </div>
+    <p>
+      La caja hijo que tiene como referencia rems, ahora estas medidas está relacionadas al tamaño de la fuente del elemento HTML y no ya a la caja Padre.
+    </p>
+    <p>
+      La unidad de medida rem siempre tomará la referencia de la etiqueta HTML. No importa si está dentro de una caja padre con otra unidad. Solo varía si cambiamos el font-size en la etiqueta HTML, dándole otro valor.
+    </p>
+    <h3>Unidad - ex</h3>
+    <p>
+      Es el mismo concepto de em, con la diferencia que mientras em está basado en el ancho de la letra "m", ex se basa en la altura de la letra "x" en la fuente del elemento padre.
+    </p>
+     <div class="ex">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima magni facere excepturi doloribus magnam. Neque repellat rem nemo sapiente cum doloribus ratione nostrum, nulla fugiat magnam at nisi cumque.</p>
+      <section class="ex-child">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis neque incidunt autem nisi maxime, et hic magnam cupiditate ad magni, porro ratione harum obcaecati veniam iusto, dicta explicabo in fugiat.
+        </p>
+      </section>
+    </div>
+    <p>
+      No hay un gran cambio, y no es un tipo de medida muy práctica, pero puede ser usada para temas muy específicos.
+    </p>
+    <h3>Unidad - ch</h3>
+    <p>
+      Basado en  la anchura del cero de la fuente del elemento, tienen ventajas a la hora de definir ciertos elementos como
+    </p>
+    <div class="ch">
+      <p>
+       0123456789
+      </p>
+    </div>
+    <div class="ch">
+      <p>
+       enmauctoso
+      </p>
+    </div>
+    <p>
+      Al poner como unidad de medida al ancho de la caja contenedora de 10ch, se adaptó perfectamente a los 10 caracteres que le escribimos.
+    </p>
+    <p>
+      Con esta Unidad de medida nos aseguramos que el elemento tengo cierta cantidad de caracteres, si se pasa, ya queda fuera de medida.
+    </p>
+    <p>Es una Unidad de medida práctica pero poco valorada y usada. Es relativo al tamaño de la fuente del navegador, y todos los navegadores la admiten y la soportan.
+    </p>
+      <a href="units.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="percents-relative">Porcentajes relativos al Contenedor</h2>
+      <p>
+        Al hablar de porcentajes, es muy importante tener en cuenta la naturaleza de la etiqueta. Cuando es una etiqueta de línea parece que le estamos dando un 100% de ancho, pero esa es su naturaleza; una etiqueta de línea en cambio, solo usa el espacio requerido.
+      </p>
+      <p>
+        Si variamos el porcentaje, la etiqueta de bloque lo hará con respecto al body (o su etiqueta padre), mientras que las etiquetas de línea ignoran medidas de ancho, alto, margen y padding.
+      </p>
+      <p>
+        Podemos aplicar porcentajes a todas los elementos de HTML, estos serán tomados en base a la naturaleza y a las medidas por defecto de cada uno. Por ejemplo, si aplicamos porcentaje al font-size, este mismo será en base al tamaño natural de la letra. 16 pixeles es igual al 100%.
+      </p>
+      <div class="percentages">
+        Esta es una caja de bloque.
+      </div>
+      <span class="percentages">
+        Esta es una caja de linea.
+      </span>
+      <br><br><br>
+      <p>
+        En el caso de la altura (height), las reglas de porcentaje se aplican al contenido de la etiqueta, es decir: la altura del contenido está delimitado por el tamaño del contenido. En pocas palabras, trabaja siempre al 100%, crece conforme va creciendo su contenido.
+      </p>
+      <p>
+        Podemos hacer cambiar este comportamiento, cuando le damos medidas a la caja contenedora.
+      </p>
+      <div class="container">
+        Este es una caja contenedora.
+        <section class="content">
+          Esta caja es el contenido.
+        </section>
+      </div>
+      <p>
+        La caja contenedora tiene determinadas medidas de alto y ancho; la caja con el contenido tiene un alto y un ancho porcentual con respecto a la contenedora. Con margin, padding y font-size también porcentuales.
+      </p>
+      <a href="units.html#inicio">Inicio</a>
+      <hr />
+      <h2 id="viewport-units">Unidades del Viewport</h2>
+       <h3> Unidades porcentuales relativas al tamaño del viewport</h3>
+       <ul>
+        <li>vw - Viewport weight - Ancho de la pantalla visible</li>
+        <li>vh - Viewport height - Alto de la pantalla visible</li>
+        <li>vmax - Máximo del viewport</li>
+        <li>vmin - Mínimo del viewport</li>
+       </ul>
+       <div class="viewport">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores a assumenda ratione nobis harum tempora ab possimus dolorem nemo illo ducimus id, voluptate placeat consequatur magnam adipisci tenetur, corporis voluptatibus!
+       </div>
+       <p>
+        Las medidas de 50vw y 50vh limitan a la caja a tomar un 50% del ancho y un 50% del alto de la pantalla visible del navegador.
+       </p>
+       <p>Si ponemos un 100% de altura, esta se adapta perfectamente al navegador. Si en cambio ponemos un 100% de ancho, esta se desborda, generando un pequeño scroll, porque el body tiene márgenes por defecto. Para evitar este problemas tenemos que indicar al body que quite los márgenes con margin: 0; o margin: none;. Pero además, cuando tenemos una barra de desplazamiento, esta también forma parte del viewport, por lo que al poner un 100% del ancho de este, automáticamente va a desplazar fuera de este a la barra.</p>
+       <p>
+        La diferencia entre vw y % es que estos están basados en el tamaño del contenedor, en cambio los primeros en el tamaño del viewport que, aunque la diferencia sea muy sutil y ligera, sigue siendo diferencia como tal.
+       </p>
+       <div class="viewport-cienporciento">
+        <p>
+          Medidas del viewport 100% de ancho y 100vh de alto
+        </p>
+       </div>
+       <p>
+        Cuando se trata de generar cajas a pantalla completa o full sreen, es más practico y eficiente combinar el tipo de medidas, usando porcentaje para el ancho y viewport-height para el alto.
+       </p>
+       <p>
+        Otra diferencia notable con los porcentajes es que las medidas de vw y vh siempre están basadas en el tamaño de la pantalla, independientemente las medidas sean definidas dentro de una caja padre o no.
+       </p>
+       <p>El contenido como por ejemplo font-size también puede ser definido por unidades de viewport y van fluyendo con los cambios en el tamaño de la pantalla.</p>
+       <div class="vmax">
+        Caja vmax
+       </div>
+       <div class="vmin">
+        Caja vmin
+       </div>
+       <p>
+        Las cajas toman el espacio proporcionalmente a las medidas indicadas. Esta proporción es tomada a partir del ancho y el alto disponibles.
+       </p>
+    <a href="units.html#inicio">Inicio</a>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+  </body>
+</html>

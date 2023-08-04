@@ -1,0 +1,189 @@
+* {
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+
+#p-border {
+  border: 2px solid fuchsia;
+}
+.caja-uno,
+.caja-dos {
+  background-color: chocolate;
+  border: medium solid greenyellow;
+  padding: 10px;
+  margin: 20px;
+}
+.caja-tres {
+  background-color: cornflowerblue;
+  border: thick solid plum;
+  padding: 20px 40px;
+  margin: 40px 20px;
+}
+.caja-cuatro {
+  background-color: yellowgreen;
+  border: thick solid pink;
+  padding: 0 20px 40px;
+  margin: 50px 40px 0;
+}
+.caja-cinco {
+  background-color: orange;
+  border: thick solid orangered;
+  padding: 10px 20px 40px 50px;
+  margin: 100px 50px 40px 0;
+}
+.caja-linea,
+.caja-bloque {
+  background-color: darkcyan;
+  width: 500px;
+  height: 50px;
+  border: medium solid black;
+  padding: 16px;
+}
+.caja-bloque {
+  margin: 32px;
+}
+.caja-linea {
+  margin: 48px;
+}
+.display-block {
+  background-color: darkcyan;
+  width: 500px;
+  height: 50px;
+  margin: 32px;
+  border: medium solid black;
+  display: block;
+}
+.display-linea {
+  background-color: darkcyan;
+  width: 500px;
+  height: 50px;
+  margin: 48px;
+  border: medium solid black;
+  display: inline;
+}
+.caja-none,
+.caja-linea-bloque,
+.caja-hidden {
+  background-color: darkolivegreen;
+  color: white;
+  width: 600px;
+  height: 300px;
+  border: medium solid black;
+}
+.caja-linea-bloque {
+  display: inline-block;
+}
+.caja-none-invisible {
+  display: none;
+}
+.caja-hidden {
+  visibility: hidden;
+}
+.overflow {
+  background-color: darkturquoise;
+  width: 200px;
+  height: 100px;
+  overflow: visible;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+}
+.box-sizing-content,
+.box-sizing-border {
+  background-color: deepskyblue;
+  box-sizing: content-box;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  border: thick solid blue;
+}
+.box-sizing-border {
+  box-sizing: border-box;
+}
+.container-col-3 {
+  background-color: orange;
+  width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+.container-col-3 > * {
+  box-sizing: border-box;
+  width: 200px;
+  float: left;
+  border: thin solid red;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*Floats*/
+.container-float {
+  background-color: cornflowerblue;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+/*Colapso de Margenes Verticales*/
+.margin-collapse {
+  background-color: skyblue;
+}
+.margin-collapse section {
+  border: thin solid black;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.margin-collapse span {
+  border: thin solid black;
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+/*Centrado de páginas*/
+.sitio-web {
+  border: thin solid black;
+  background-color: yellowgreen;
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Margenes negativos*/
+.box {
+  background-color: sandybrown;
+  padding: 20px;
+  margin-top: -30px;
+  margin-left: -30px;
+}

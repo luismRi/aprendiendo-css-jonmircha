@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*Border Radius*/
+.border-radius {
+  background-color: black;
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid red;
+  border-radius: 2rem;
+}
+.border-for-4 {
+  background-color: darkblue;
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid palevioletred;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 4rem;
+  border-bottom-left-radius: 1rem;
+}
+.border-round {
+  background-color: crimson;
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid black;
+  border-radius: 50%;
+}
+.border-elipsis {
+  background-color: chartreuse;
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid orange;
+  border-radius: 50% / 40%;
+}
+.perfect-elipsis {
+  background-color: blueviolet;
+  width: 400px;
+  height: 200px;
+  margin: 2rem auto;
+  border: thick solid green;
+  border-radius: 50%;
+}
+.perfect-elipsis-1 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid green;
+  border-radius: 50%;
+}
+/*outlines*/
+.box {
+  background-color: aqua;
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  border: thick solid brown;
+}
+.outline {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 100px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  outline-width: 50px;
+  outline-style: dashed;
+  outline-color: chartreuse;
+}
+.outline-offset {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  outline: thick solid red;
+  outline-offset: 3rem;
+}

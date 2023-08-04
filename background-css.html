@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fondos en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/background-css.css" />
+  </head>
+  <body>
+    <h1>Fondos en CSS</h1>
+    <a href="https://cssreference.io/" target="_blank"
+      >Página de Referencia CSS</a
+    >
+    <br />
+    <a href="index.html#inicio">🚀</a>
+    <h3 id="inicio">Tipos de fondos (background)</h3>
+    <p>
+      La propiedad de fondos o background, tiene 8 distintos tipos para ser
+      aplicada. En esta sección iremos viendo cada uno de ellos.
+    </p>
+    <ul>
+      <li>
+        <a href="background-css.html#background-color">Backgrouband-color</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-image">Backgrouband-image</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-repeat">Backgrouband-repeat</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-size">Backgrouband-size</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-position"
+          >Backgrouband-position</a
+        >
+      </li>
+      <li>
+        <a href="background-css.html#background-clip">Backgrouband-clip</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-origin">Backgrouband-origin</a>
+      </li>
+      <li>
+        <a href="background-css.html#background-attachment"
+          >Backgrouband-attachment</a
+        >
+      </li>
+      <li>
+        <a href="background-css.html#background-multile">Background-Multiple</a>
+      </li>
+    </ul>
+    <div class="box"></div>
+    <h2 id="background-color">Background-Color</h2>
+    <p>Esta propiedad, define el color de fondo del elemento.</p>
+    <div class="box bg-color"></div>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-image">Background-Image</h2>
+    <p>
+      Define el fondo del elemento insertando una imagen. Para insertar una
+      imágen como fondo, debemos llamarla con la función url().
+    </p>
+    <div class="box bg-image"></div>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-repeat">Background-Repeat</h2>
+    <p>Esta propiedad define como se repite la imagen de fondo del elemento.</p>
+    <div class="box bg-repeat"></div>
+    <p>
+      Esta propiedad tiene distintos valores. Dándole un tamaño a la imágen con
+      background-size se puede repetir en "x" y en "y". Con el valor no-repeat,
+      la imágen se verá una sola vez con el tamaño que se le haya indicado.
+    </p>
+    <div class="box bg-repeat-1"></div>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-size">Background-Size</h2>
+    <p>Define el tamaño de fondo, con primer valor x y segundo valor y.</p>
+    <p>
+      Cover, cambia el tamaño de la imagen de fondo para asegurarse que
+      permanezca completamente visible.
+    </p>
+    <p>
+      contain, cambia el tamaño de la imágen de fondo para asegurarse de que el
+      elemento esté completamente cubierto.
+    </p>
+    <div class="box bg-size"></div>
+    <p>
+      la imágen de la puesta de sol a dos valores (que son los mismos del tamaño
+      de la caja). Las imágenes pueden verse deformadas.
+    </p>
+    <div class="box bg-size-1"></div>
+    <p>
+      Aquí con valor cover, la imágen al ajustarse al tamaño de la caja se
+      desplaza levemente para ocupar todo el tamaño disponible.
+    </p>
+    <div class="box bg-size-2"></div>
+    <p>
+      Con contain, la imágen prioriza que el fondo del elemento esté
+      completamente cubierto, por este motivo la imágen se repite.
+    </p>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-position">Background-Position</h2>
+    <p>
+      Define la posición de la imágen de fondo con primer valor x y segundo
+      valor y, en el caso que este último no se especifíque, su valor será
+      center.
+    </p>
+    <p>
+      Aparte de valores numéricos, podemos especificar su posición con palabras:
+      center, top, bottom,left y right.
+    </p>
+    <div class="box bg-position"></div>
+    <p>Background-position con valores numéricos (20px 40px).</p>
+    <div class="box bg-position-1"></div>
+    <p>Backgroun-position con valores por palabras reservadas (center).</p>
+    <p>
+      Si la caja tiene un background-color definido, este e image pueden
+      coexisitr perfectamente.
+    </p>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-clip">Background-Clip</h2>
+    <p>Define cuanto debe extenderse el fondo dentro del elemento</p>
+    <p>
+      El valor por defecto es border-box, es decir que cubrirá hasta el borde
+      del elemento.
+    </p>
+    <div class="box bg-clip"></div>
+    <p>
+      Al cambiar esta propiedad, podemos hacer que los fondos ya no tomen en
+      consideración el borde, sino que comiencen a partir de este.
+    </p>
+    <p>
+      Esta propiedad afecta al color de fondo en mayor grado que a la imagen de
+      fondo.
+    </p>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="backgroun-origin">Background-Origin</h2>
+    <p>Define el origen de la imagen de fondo</p>
+    <p>
+      Mientras que en la anterior propiedad background-clip su valor por defecto
+      es border-box; el de clip en cambio es padding-box, por eso la imagen
+      cubre a partir del borde y no lo incluye.
+    </p>
+    <div class="box bg-origin"></div>
+    <div class="box bg-origin-1"></div>
+    <p>
+      La primera imagen respeta el valor por defecto, mientras que a la segunda
+      se le indicó que comience a partir del borde (border-box).
+    </p>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="background-attachment">Background-Attachment</h2>
+    <p>
+      Define como se comportará la imágen de fondo al desplazarse por la página.
+    </p>
+    <div class="box bg-attachment"></div>
+    <p>
+      La imagen queda fija y a medida que la página se vaya scroleando y se
+      desplace
+    </p>
+    <h2 id="background-multiple">Background-Multiple</h2>
+    <p>
+      Podemos hacer que las imagenes se repitan en el fondo, separándolas por
+      comas.
+    </p>
+    <div class="box bg-multiple"></div>
+    <p>
+      Es importante el orden en que se definene las imagenes, porque es un orden
+      de jerarquía.
+    </p>
+    <a href="background-css.html#inicio">Inicio</a>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

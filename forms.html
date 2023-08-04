@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/forms.css" />
+  </head>
+  <body>
+    <h1>Formularios en CSS</h1>
+    <p>Página de apoyo para formularios.</p>
+    <a href="https://materializecss.com/" target="_blank">Materialize</a
+    ><br /><br />
+    <h2>Formulario de contacto</h2>
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/lmr69r@gmail.com"
+      method="post"
+    >
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Escribe tu Nombre"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        title="Nombre solo acepta letras y espacios en blanco."
+        required
+      />
+      <input
+        type="email"
+        name="correo"
+        placeholder="Escribe tu Correo"
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+        title="Formato de Correo inválido"
+        required
+      />
+      <textarea
+        name="comentarios"
+        placeholder="Escribe tus comentarios"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
+      <input type="submit" />
+    </form>
+    <p>
+      Los formularios son elementos que trabaja en caja, por lo que se
+      visualizan, en linea; para cambiar esto y se comporten como elementos de
+      bloque, le damos un display:block.
+    </p>
+    <p>
+      CSS permite trabajar mucho con los formularios, haciéndolos no solo más
+      eficientes, sino mucho más prolijos y agradables a la vista del usuario.
+      Haciendo que la simple tarea de llenar un formulario sea algo entretenido.
+    </p>
+    <a href="forms.html#inicio">Inicio</a>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

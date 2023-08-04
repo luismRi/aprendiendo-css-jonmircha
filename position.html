@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento en CSS</title>
+    <link rel="stylesheet" href="css/position.css">
+  </head>
+  <body>
+    <h1>Posicionamiento en CSS</h1>
+    <article>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li><a href="position.html#posicionamiento-que-es">¿Qué es el Posicionamiento en CSS?</a></li>
+      <li><a href="position.html#position-static">Posición Static</a></li>
+      <li><a href="position.html#position-relative">Posición Relativa</a></li>
+      <li><a href="position.html#position-absolute">Posición Absoluta</a></li>
+      <li><a href="position.html#position-fixed">Posición Fija</a></li>
+      <li><a href="position.html#position-sticky">Posición Pegajosa</a></li>
+      <li><a href="position.html#prop-zindex">Propiedad z-index</a></li>
+      <li><a href="position.html#fixed-sticky">Cabecera Fixed vs Sticky</a></li>
+      <li><a href=""></a></li>
+    </ul>
+     <a href="index.html#inicio">🚀</a>
+    <h2 id="posicionamiento-que-es">¿Qué es el posicionamiento en CSS?</h3>
+    <p>
+      las posiciones FLOAT y POSITION nos permiten modificar la posición natural de cualquier elemento del documento HTML.
+    </p>
+    <p>
+      El navegador coloca cada elemento teniendo en cuenta el orden en que aparece en el documento y su tipo de visualización dependiendo de si es un elemento de linea o de bloque.
+    </p>
+    <p>
+      Con FLOAT y POSITION podemos modificar ese compportamiento.
+    </p>
+    <h3>Elementos Flotantes</h3>
+    <p>
+      float: convierte un elemento en flotante desplazandolo a la zona más a la izquierda o más a la derecha de la posición en que se encontraba.
+      clear: limpia la flotación (left, right, both).
+    </p>
+    <h3>Tipos de Posicionamiento</h3>
+    <ul>
+     <li>static (default)</li>
+     <li>relative</li>
+     <li>absolute</li>
+     <li>fixed</li>
+     <li>sticky</li>
+    </ul>
+    <p>
+      Para mover los elementos se activan las propiedades:
+    </p>
+    <ul>
+      <li>top (Vertical eje - y)</li>
+      <li>bottom (Vertical eje - y)</li>
+      <li>left (Horizontal eje - x)</li>
+      <li>right (Horizontal eje - x)</li>
+      <li>z-index (profundidad e-e - z)</li>
+    </ul>
+    <p>
+      Las propiedades top y left van a tener prioridad sobre las bottom y rigtht respectivamente.
+    </p>
+    <p>
+      Ninguna de estas cinco propiedades funcionan con el valor static.
+    </p>
+    <a href="position.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="position-static">Posición Static</h2>
+      <p>
+        Static es el valor por defecto y significa que el elemento va a respetar el flujo del documento HTML por lo que no se puede mover ni posicionar.
+      </p>
+      <div class="static">Caja Estática</div>
+      <p>
+        El posicionamiento estático no permite que el elemento cambie ni se mueva de ninguna manera. Si por alguna  necesidad en particular es necesario resetear los estilos, se puede hacer poniendo  position:static, y el flujo del documento HTML volverá a su posición natural.
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr />
+    </article>
+    <article>
+      <h2 id="position-relative">Posición Relativa</h2>
+      <p>
+        El posicionamiento relative va a hacer que el elemento conserve sus dimensiones y posición original en el flujo del documento. Si se mueve toma como referencia su posición original.
+      </p>
+      <div class="relative">Caja Relativa</div>
+      <br><br>
+      <p>
+        La div CajaRelativa conserva sus dimensiones y su caracteristica de bloque, pero se ha movido 50 pixeles hacia abajo y 50 a la derecha con respecto a su posición original. De tal forma que aunque este texto está abajo en el flujo del documento, hubo que intercalar dos etiquetas br (de salto de linea) para que la div no lo tapara. Arriba en cambio a quedado el espacio perfecto que antes ocupaba, es por eso que se dice que conserva su posición original.
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr/>
+    </article>
+    <article>
+      <h2 id="position-absolute">Posición Absoluta</h2>
+      <p>
+        Una caja absoluta se comporta de dos formas diferentes, dependiendo de la referencia que toma en base a su posicionamiento. 
+      </p>
+      <p>
+        absolute: El elemento pierde sus dimensiones y posición original en el flujo del Documento. Si se mueve puede tomar como referencia dos elementos:
+      </p>
+      <ol>
+        <li>El primer ancestro con posicionamiento relativo</li>
+        <li>Si no encuentra un ancestro relativo se mueve con respecto al Documento HTML.</li>
+      </ol>
+      <div class="absolute">Caja Absoluta</div>
+      <br><br>
+      <p>
+        Al perder sus dimensiones, pues pierde hasta su lugar en el Documento, se las debemos dar con widht y height (y en este caso ayudarnos de dos etiquetas br).
+      </p>
+      <section class="relative-parent">
+        <div class="absolute-child">
+          Caja Absoluta con Ancestro Relativo
+        </div>
+      </section>
+      <p>
+        Al tener un ancestro relativo, la caja absoluta se mueve dentro de este con respecto a las diedmnsiones que se hayan indicado. E neste caso se movió -10 pixeles top y 30 pixeles left con respecto al ancestro padre "section".
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr/>
+    </article>
+    <article>
+      <h2 id="position-fixed">Posición Fija</h2>
+      <p>
+        fixed: El elemento pierde sus dimensiones y posición original en el flujo del documento. Si se mueve toma como referencia al Documento HTML y queda fijo en la posición, cuando el scroll se mueva, el elemento no lo hará quedando FIJO.
+      </p>
+       <div class="fixed">Caja Fija</div>
+      <p>
+        La caja Fija ha tomado una posición fija segun las coordenadas que se le dio dentro del Documento, en este caso 20 pixeles right y 20 pixeles botton (abajo y a la derecha). Pierde además totalmente su lugar en el flujo de dicho Documento.
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr/>
+    </article>
+    
+      <h2 id="position-sticky">Posición Pegajosa</h2>
+      <div class="pegajosa">Caja Pegajosa Verde</div>
+      <p>
+        sticky: Es una combinación de posicionamiento relative y fxed, para este posicionamiento las propiedades de topo, bottom, left y right no mueven al elemento, sireven como un punto de referencia, mientras no lleguen a ese valor, el elemento se comporta como relative y cuando llega se transforma en fixed.
+      </p>
+      <article class="caja-sticky">
+       <div class="sticky">Caja Pegajosa Azúl</div>
+      </article>
+      <p>
+        Para que este comportamiento funcione, el elemento sticky debe ser un hijo directo del body o su elemento contenedor deben tener dimensiones definidas y solo será sticky dentro de las dimensiones de su contenedor padre.
+      </p>
+     
+      <p>
+        Sticky es un posicionamiento dinámico. Sirve además para dar un efecto de diapositivas.
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr/>
+    <article>
+      <h2 id="prop-zindex">Propiedad z-index</h2>
+      <p>
+        z-index permite controlar la profundidad de los elementos posicionados, su valor por defecto es auto, acepta tanto números positivos como negativos y además cero.
+      </p>
+      <p>A mayor valor el elemento está más al frente, a menor valor más al fondo.</p>
+      <p>
+        Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden estar sobre el elemento padre, dándoles un valor negativo.
+      </p>
+      <p>
+        Los elementos para que se puedan posicionar, deben tener una position diferente a static. Cuando el z-index es auto en todas las cajas, se considera el oreden en que fueron definidas en el Documento HTML.
+      </p>
+      <div class="z-index-1">Probando z-index 1</div>
+      <div class="z-index-2">Probando z-index 2</div>
+      <p>
+        Ambas cajas z-index tienen position relative, a la caja dos se la posicionó sobre la caja uno con weight y height, pero como la caja uno posición de z-index superior a la caja dos, se superpuso a esta, el espacio que quedó en blanco es el que originalmente ocupaba caja dos. idealmente es preferible trabaja con los números de posicionamiento de 10 en 10 o de 5 en 5, para tener márgen por si en un futuro es necesario agregar alguna caja entre ellos.
+      </p>
+      <br><br>
+      <section class="z-index-parent">
+        <div class="z-index-child">Hijo z-index</div>
+      </section>
+      <p>
+        De la única forma en que el elemento padre se posicione sobre el elemento hijo es que este no tenga asignada posición z-index y el hijo tenga valores negativos. Pero esto en el flujo de un documento normal, no tendría mucho sentido.
+      </p>
+      <a href="position.html#inicio">Inicio</a>
+      <hr/>
+    </article>
+    <a href="index.html#inicio">🚀</a>
+  </body>
+</html>

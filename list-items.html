@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listas en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/list-items.css" />
+  </head>
+  <body>
+    <h1>Listas en CSS</h1>
+    <p>
+      Las list-style tiene cuatro vpropiedades, iremos viendo cada una de estas:
+    </p>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li><a href="list-items.html#list">List - style - Tipe</a></li>
+      <li><a href="list-items.html#image">List - style - Image</a></li>
+      <li><a href="list-items.html#position">List - style - Position</a></li>
+      <li><a href="list-items.html#shorthand">List - style</a></li>
+      <li><a href="list-items.html#columns">Texto en Columnas</a></li>
+    </ul>
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+    <h2 id="tipe">List - style - tipe</h2>
+    <ul class="list">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <p>
+      Cuando queremos modificar alguna característica desde el HTML no podemos
+      hacerlo sino forma parte de la naturaleza de la etiqueta; pero desde CSS
+      si podemos acceder y cambiar ciertos atributos.
+    </p>
+    <ul class="list-romans">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <p>
+      La lista es desordenada, no se debería poder aplicar números romanos, sin
+      embargo desde el CSS si se pudo cambiar esta propiedad, inclusive alfabeto
+      griego.
+    </p>
+    <ul class="list-greek">
+      <li>Alpha</li>
+      <li>Beta</li>
+      <li>Gamma</li>
+      <li>Delta</li>
+    </ul>
+    <p>Con valor none, quitamos las viñetas.</p>
+    <ul class="list-none">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <a href="list-items.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="image">List - style - Image</h2>
+    <p>
+      Dando a la viñeta la url de una imagen, se cargará con la misma, pero esta
+      tiene que ser exactemente del tamaño de la bullet para que no se desborde.
+    </p>
+    <ul class="list-image">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <h2 id="position">List - style - Position</h2>
+    <p>
+      No es una propiedad que se use mucho, por defecto, los bullets están por
+      fuera de la lista, pero con esta propiedad pueden integrarse a esta y así
+      recibir los mismos estilos
+    </p>
+    <ul class="list-position-1">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <ul class="list-position-2">
+      <li>Primavera</li>
+      <li>
+        Verano - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+        sapiente voluptatem. Laboriosam, quam reprehenderit est adipisci dicta
+        minima itaque porro rerum at illo odit quaerat necessitatibus hic maxime
+        ipsum magnam.
+      </li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <p>
+      esta propiedad tiene problemas de índole estética, y más si la lista tiene
+      contenido que desborde la línea, pues este mismo ocupará el lugar de las
+      viñetas pues estas estan integradas.
+    </p>
+    <a href="list-items.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="shorthand">List - style</h2>
+    <p>
+      list-style es el shorthand de estas propiedades, y como todo shorthand,
+      debemos seguir el orden debido para que el navegador pueda leerlo
+      correctamente.
+    </p>
+    <ul class="list-shorthand">
+      <li>Primavera</li>
+      <li>Verano</li>
+      <li>Otoño</li>
+      <li>Invierno</li>
+    </ul>
+    <a href="list-items.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="columns">Texto en Columnas</h2>
+    <p>
+      Se puede dar estilos poniendo el texto en columnas con cuatro propiedades:
+      count (cantidad de columnas), gap (espacio entre estas), rule (traza una
+      línea entre columnas), widht (que le da un ancho mínimo).
+    </p>
+    <p>
+      Esta propiedad sirve para separar párrafos, no para maquetar áreas de
+      nuestro Documento.
+    </p>
+    <ol class="text-column-4">
+      <li>Mú de Aries</li>
+      <li>Aldeberán de Tauro</li>
+      <li>Saga & Kanon de Géminis</li>
+      <li>Death Mask de Cáncer</li>
+      <li>Aioria de Leo</li>
+      <li>Shaka de Virgo</li>
+      <li>Dohko de Libra</li>
+      <li>Milo de Escorpión</li>
+      <li>Aioros de Sagitario</li>
+      <li>Shura de Capricornio</li>
+      <li>Camus de Acuario</li>
+      <li>Afrodita de Piscis</li>
+    </ol>
+    <article class="lorem-column-3">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+        aspernatur accusantium iusto libero laborum autem? Praesentium eum dicta
+        nobis ea culpa labore illo enim non adipisci, ullam expedita iusto
+        nihil.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+        aspernatur accusantium iusto libero laborum autem? Praesentium eum dicta
+        nobis ea culpa labore illo enim non adipisci, ullam expedita iusto
+        nihil.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+        aspernatur accusantium iusto libero laborum autem? Praesentium eum dicta
+        nobis ea culpa labore illo enim non adipisci, ullam expedita iusto
+        nihil.
+      </p>
+    </article>
+    <a href="list-items.html#inicio">Inicio</a>
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

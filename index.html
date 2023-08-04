@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de CSS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png">
+  </head>
+  <body>
+    <h1>Aprendiendo CSS</h1>
+    <article>
+      <h2 >Que es CSS</h2>
+       <h3 id="inicio">Temario del curso</h3>
+       <h3>Sección Principal</h3>
+       <ul>
+        <li><a href="index.html#sintaxis">Sintáxix CSS</a></li>
+        <li><a href="index.html#comentarios">Comentarios en CSS</a></li>
+        <li><a href="index.html#formas-estilos">Formas para aplicar Estilos</a></li>
+        <li><a href="index.html#selectores-basicos">Selectores Básicos</a></li>
+        <li><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
+        <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+        <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
+        <li><a href="index.html#algoritmo">Algoritmo en CSS</a></li>
+        <li><a href="index.html#reseteo">Reseteo y Normalización de Estilos</a></li>
+        <li><a href="index.html#prefijos">Prefijos de los Navegadores</a></li>
+      </ul>
+      <h3>Secciones Secundarias</h3>
+      <ul>
+      <li><a href="box-model.html">Modelo de caja</a></li>
+      <li><a href="position.html">Posicionamiento en CSS</a></li>
+      <li><a href="position-examples.html">Ejercicios de Posicionamiento en CSS</a></li>
+      <li><a href="colors.html">Colores en CSS</a></li>
+      <li><a href="units.html">Unidades de Medida en CSS</a></li>
+      <li><a href="variables-functions.html">Variables y Funciones en CSS</a></li>
+      <li><a href="font-texts.html">Estilos de Fuentes y Textos</a></li>
+      <li><a href="border-outline.html">Bordes y Outline</a></li>
+      <li><a href="background-css.html">Fondos en CSS</a></li>
+      <li><a href="images-css.html">Imagenes en CSS</a></li>
+      <li><a href="list-items.html">listas en CSS</a></li>
+      <li><a href="tables.html">Tablas en CSS</a></li>
+      <li><a href="forms.html">Formularios en CSS</a></li>
+      <li><a href=""></a></li>
+      </ul>
+      <p>
+        CSS por sus siglas en inglés significa: <i>Cascading Style Sheets</i> u
+        Hojas de Estilo en Cascada. Ni HTML ni CSS son lenguajes de
+        programación, HTML es un lenguaje de marcado que define contenido y CSS
+        es un lenguaje de definición de estilos que le van a dar presentación a
+        nuestros Documentos HTML. CSS aunque como tal no es lenguaje de
+        programación, pero agrega caracteristicas que son propias de los
+        lenguajes de programación, por ejemplo en este Lenguaje tenemos las
+        Coustom Properties o variables CSS que permiten almacenar un valor,
+        también ciertas funciones que nos permiten aplicar ciertos
+        comportamientos y ciertos atributos que permiten programar algunas cosas
+        (ej animación).
+      </p>
+      <p>
+        <h2 id="sintaxis">Sintáxis CSS</h2>
+        Una regla CSS consta de dos partes:
+        <ol>
+          <li>Selector: Que puede ser cualquier etigueta HTML.</li>
+          <li>Bloque de declaraciones.</li>
+        </ol>
+        El Selector más básico son las etiquetas que, cuando aplicamos estilos a un selector, los estilos aplicaran en todas esas etiquetas del Documento. <br>
+        Los bloques de declaraciones tiene la siguiente sintáxis; "Atributo: Valor;". Poner dos puntos y punto y coma es imprecindible, de otra manera nos dará un error de sintáxis. Si el nombre del atributo tiene más de dos palabras, se escribiran seguidas de un guión (una-palabra-despues-de-otra). Los bloques de declaración van entre llaves.
+      </p>
+      <h2 id="comentarios">Comentarios en CSS</h2>
+      <p>Para comentar en CSS se usa al igual que en Javascript, diagonal asterisco para abrir y asterisco diagonal para cerrar (/* comentario */). Con los atajos del teclado podemos  seleccionar un bloque de líneas y comentarlas en un solo paso. (shift + alt + a).
+      </p>
+      <h2 id="formas-estilos">Formas para aplicar Estilos</h2>
+      <p>
+        Hay tres formas: <br>
+        <ul>
+          <li>Estilos en linea</li>
+          <li>Estilos internos</li>
+          <li>Definición de Hoja Externa</li>
+        </ul>
+        La forma de definir estilos en línea es a través del atributo "style" como atributo de HTML. <br>
+        Definir estilos internamente es a través de abrir etiquetas "style" (que se hace en la cabecera del Documento). <br>
+        La tercer forma es la ideal, se define una hoja externa, que contiene su propio archivo CSS y se vincula al Documento HTML a través de la etiqueta "link", con los atributos de rel y valor "stylesheet" y el atributo "href" al cual indicamos la ruta hacia la hoja externa. <br>
+        La buena práctica dicta que es mejor siempre usar una hoja de estilos externa, pero hay veces que por practicidad o alguna necesidad puntual, se pueden usar las otras formas para aplicar los estilos.
+      </p>
+      <p>Hay otras formas de llamar una hoja de estilo, y además, desde una hoja podemos vincular otra hoja con arroba import e invocar una función CSS lamada url "@import url()", dentro de la función indicamos la ruta de la hoja que estamos invocando. El problema con este método es el siguiente: cuando el navegador va descargando un Documento y lee una etiqueta link, comienza a descargar los estilos CSS, pero continua leyendo y descargando el Documento HTML. Si el navegador lee un @import, se detiene ahí hasta completar la lectura y descarga de este contenido, lo que puede perjudicar en el rendimiento general (comportamiento bloqueante).</p>
+    </article>
+    <a href="index.html#inicio">🚀</a>
+      <hr>
+      <h2 id="selectores-basicos">Selectores Básicos</h2>
+      <p>Un selector es cualquier etiqueta HTML a la que le vamos a aplicar estilos. <br>
+        Existen tres tipos de selectores básicos: Etiquetas, Identificadores y Clases.
+    <ul>
+     <li>Etiquetas - Son elementos HTML</li>
+     <li>Identificadores - id - #</li>
+     <li>Clases - atributo class - .class</li>
+    </ul>
+      </p>
+      <p class="border">
+        Dar estilos con id, se considera una mala práctica, pues solo podemos tener un identificador (es como una clave, el dni de algo en particular). Una de las caracteristicas de CSS es la re utilización de los estilos, y con los id no lo podemos hacer. los id son más utiles a la hora de interactuar con JavasCript. <br>
+        Las clases son la manera ideal de maquetar y dar estilos, pues están entre medio. Las etiquetas HTML son muy amplias y le dan estilo a todo el Documento, los id son identificadores únicos, entonces las clases nos dan un equilibrio deseado, permitiendo reutilizar código. Es muy ùtil dar nombres alusivos a los estilos que aplicamos, porque eso facilita la reutilizaciòn y comprension de los mismos.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aspernatur, officiis sint necessitatibus suscipit exercitationem sed! Ullam expedita veniam sunt alias aspernatur ipsa, doloremque vitae doloribus! Eum minima ad odio?
+      </p>
+      <p id="parrafo-dos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio odit ducimus culpa illo animi soluta iusto pariatur vitae ab eligendi, dolores, eum voluptatum sunt cupiditate enim autem ad architecto!
+      </p>
+      <p class="text-32 bg-skyblue">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur commodi vel sequi, rem illum sunt maxime nemo sapiente eum tenetur facere quasi est fuga consequuntur obcaecati repudiandae. Dolore, voluptates unde?
+      </p>
+      <p class="text-20 bg-steelblue color-white">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, dolor aliquam. Repellendus fugiat, nulla nam, tempore accusantium cum, soluta nesciunt vero minima quae odit quam ullam at natus. Deserunt, maiores.
+      </p>
+      <p class="text-32 bg-steelblue color-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nam et tenetur cupiditate eveniet ea laudantium magnam esse illo debitis explicabo mollitia culpa, quae aut ipsa at in. Corporis, explicabo!
+      </p>
+    <a href="index.html#inicio">🚀</a>
+      <hr>
+      <h2 id="selectores-avanzados">Selectores Avanzados</h2>
+      <article>
+        <h3>Selectores de Hijos</h3>
+        <h4>Selector de Hijos Directos</h4>
+        <p>
+          Un hijo directo es el elemento que está en el primer nivel. En una ul (lista desordenada), los hijos directos son cada li (list item). Para aplicar estilos a los hijos directos se usa el símbolo mayor que (>) en el nombre de la clase, luego se escribe la etiqueta a la cual se van a aplicar los estilos. 
+        </p>
+        <ul class="hijos-directos">
+          <li><b>Primavera</b></li>
+          <li><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selector de Hijos Descendientes</h4>
+        <p>
+          Los estilos para los hijos descendientes, es decir: de un segundo nivel, se aplican decando un espacio en blanco, y escribiendo el nombre de la etiqueta. En el primer caso se había aplicado el color de fondo en las etiquetas li, por eso se coloreo todo, pues son etiquetas de bloque, en el segundo caso en cambio solo se colorean las palabras, pues los estilos se aplicaron a las etiquetas b, que son de línea.
+        </p>
+        <ul class="hijos-descendientes">
+          <li><b>Primavera</b></li>
+          <li><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+        <h3>Selectores de hermanos</h3>
+        <h4>Selectores de Hermanos en General</h4>
+        <p>
+          Este tipo de selector se aplica directamente a todos los hermanos, se escribe la clase a la cual se quiere aplicar los estilos y después de un espacio se escribe una tilde (~) seguido del selector al cual queremos aplicar. Los estilos se aplicarán a partir del elemento que hayamos seleccionado como referencia.
+        </p>
+        <ul>
+          <li><b>Primavera</b></li>
+          <li class="hermanos-general"><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selectores de Hermanos Adyacentes</h4>
+        <p>
+          Para Hermanos adyacentes hacemos el mismo procedimiento, pero el símbolo que distingue a estos es la suma (+), y solo se aplicará al elemento que le sigue al que tomamos como referencia.
+        </p>
+        <ul>
+          <li><b>Primavera</b></li>
+          <li class="hermanos-adyacente"><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+        <p>
+          Este tipo de slector aplica para todas las etiquetas y elementos, no tan solo a las clases.
+        </p>
+        <h3>Selectores de Atributos</h3>
+        <p>
+          Los selectores de atributos nos van a permitir aplicar estilos tomando como referencia cualquier atributo (por ejemplo un href). Tienen una gran potencia con diferentes variantes. Entre corchetes ponemos el atributo al cual queremos poner como referencia. <br>
+          Usamos el asterisco (*) que funciona como un comodín que aplica el estilo si contiene la palabra en cuestion. <br>
+          Cuando usamos el símbolo sircunflejo (^) el estilo se va a aplicar siempre y cuando empiecen con la palabra o termino que querramos aplicar. <br>
+          El símbolo de dolar ($) aplica el estilo que contiene el texto requerido al final. <br>
+          El símbolo de la tilde (~) además de servir para los hermanos, si está dentro del corchete servirá también para buscar si existe un término dentro de una lista de clases separada por espacios. <br>
+          El símbolo pipe o pleca (|) es similar al anterior (~), funciona de la misma forma, solo que al final el término o texto en cuestión debe terminar con un guión medio(-).
+        </p>
+        <nav class="selectores-atributos">
+          <ul>
+            <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+            <li><a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+            <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+            <li><a href="http://jonmircha.com/notas" target="_blank">Notas</a></li>
+            <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+            <li><a class="menu-item ahora button" href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+            <li><a href="index.html#inicio">Regresar al Temario</a></li>
+          </ul>
+        </nav>
+        <h3>Selector Universal(*)</h3>
+        <p>
+          El Selector Universal representado por el asterisco (*) aplica los estilos a todos los elementos HTML del Documento. <br>
+          Tambien puede ser usado de manera contextual o individual dentro de una clase o selector y aplicará a todos los elementos dentro de ese contexto.
+        </p>
+        <ul class="selector-universal">
+          <li><b>Primavera</b></li>
+          <li><b>Verano</b></li>
+          <li><b>Otoño</b></li>
+          <li><b>Invierno</b></li>
+        </ul>
+      </article>
+    <a href="index.html#inicio">🚀</a>
+      <hr>
+     <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+      <p>
+        Son un tipo especial de selectores. Dan los estilos dependiendo el contexto o la posición del elemento al que queremos dar estilos, o dependiendo de ciertos estado que tenga este elemento HTML. Las pseudoclases se distinguen porque comienzan con dos puntos (:). <br>
+        Hay pseudoclases para elementos de tipo formulario, para enlaces. Hay una jerarquía, por lo cual importa el orden en que se definien, siendo primero :link, :active, :visited y :hover. <br>
+        Cualquier elemento tiene estado hover.
+      </p>
+      <form class="form-pseudoclases">
+        <input type="text" name="nombre" placeholder="Escribe tu Nombre" required><br>
+        <input type="email" name="correo" placeholder="Escribe tu Correo" required><br>
+        <input type="submit">
+      </form><br>
+      <nav class="menu-pseudoclases">
+        <a href="seccion1">Seccion 1</a>
+        <a href="seccion2">Seccion 2</a>
+        <a href="seccion3">Seccion 3</a>
+        <a href="seccion4">Seccion 4</a>
+      </nav>
+      <p class="p-pseudoclases">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa libero, enim odio, tempora reiciendis praesentium esse voluptatem ipsam qui beatae provident excepturi ullam quibusdam! Ut sunt illo odio nihil perspiciatis?
+      </p>
+      <ol class="lista-pseudoclase">
+        <li>Mú de Aries</li>
+        <li>Aldeberán de Tauro</li>
+        <li>Saga & Kanon de Géminis</li>
+        <li>Death Mask de Cáncer</li>
+        <li>Aioria de Leo</li>
+        <li>Shaka de Virgo</li>
+        <li>Dohko de Libra</li>
+        <li>Milo de Escorpión</li>
+        <li>Aioros de Sagitario</li>
+        <li>Shura de Capricornio</li>
+        <li>Camus de Acuario</li>
+        <li>Afrodita de Piscis</li>
+      </ol>
+      <p>
+        class :first-child, le dará estilos al primer elemento en este caso de una lista. <br>
+        class :last-child, le dará estilos al último elemento. <br>
+        class :nth-child(), le va a dar los estilos al hijo que seleccionemos entre los paréntesis. En este caso con "nth" y entre paréntesis acompañamos un número "x" seguido de un letra "n", nos irá aplicando los estilos a partir de x y cada xn elementos. Si en cambio ponemos xn + 1, esto haría que los estilos se dezplacen uno con respecto a n. <br>
+        Con nth-child() podemos hacer que los estilos se apliquen a los elementos pares (even) o impares (odd). <br>
+      </p>
+      <article class="articulo-pseudoclase">
+        <header>Esto es una Cabecera</header>
+        <p>Esto es un Párrafo</p>
+        <div>Esto es una Div</div>
+        <p>Esto es un Párrafo</p>
+        <section>Esto es una Sección</section>
+        <p>Esto es un Párrafo</p>
+        <div>Esto es una Div</div>
+        <p>Esto es un Párrafo</p>
+        <footer>Esto es un Footer</footer>
+      </article>
+      <p>
+        Existen otro tipo de pseudoclases: :first-of-type, seleccionará al primer elemento del tipo que hayamos seleccionado. así entonces hay un :last-of-type, que seleccionará al último de su clase. También hay lógicamente un :nth-of-type() que seleccionará según el número entre paréntesis; aplican además las mismas fórmulas de nth. <br>
+        Cuando queremos aplicar estilos a todos los elementos ecepto alguno, existe para esto la negación, en este caso escribimos :not() dentro del paréntesis especificamos el elemento que queremos excluir. En el caso de querer excluir más de un elemento, los ponemos detrás de una coma y unb espacio.
+      </p>
+     </article>
+    <a href="index.html#inicio">🚀</a>
+      <hr>
+      <h2 class="etiquetas-h2" id="pseudoelementos">Pseudoelementos</h2>
+      <p>
+        Los pseudoelementos dan estilos a partes especìficas de un elemento. Para diferenciarlo de las pseucoclases se usan dos puntos dobles (::). <br>
+        Pseudoelementos after y before: Como sus nombres lo indican, sirven para agregar contenido antes o después de un elemento en particular.
+      </p>
+      <p>
+        <i>Bandai Myth Cloth Ex</i><span class="saga-geminis">Saga de Géminis</span><span class="saga-precio">500</span>
+      </p>
+      <p>
+        Pseudoelemntos first-letter y first-line, que hacen referencia a la primera letra y a la primera línea. Encajan para cualquier elemento de bloque: párrafo, div, encabezado, sección, etc, artículo.
+      </p>
+      <p class="p-pseudoelemento">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta modi deleniti, quo eum consequatur laboriosam impedit vitae? Sunt, officiis quia, saepe dolores, similique quaerat quibusdam molestias deserunt repellat adipisci dolorum!
+      </p>
+      <p>Psudoelemento selection, que hace eferencia a cuando el usuario selecciona el texto, este cambie de alguna forma determinada (para que se seleccione todo el documento usamos el *).</p>
+      <p>Pseudoelemento placeholder, como su nombre lo indica, pondrá estilos en el placeholder de un input.
+      </p>
+      <input class="input-pseudoelemento" type="text" name="nombre" placeholder="Escribe tu nombre"><br>
+      <article id="agrupar-selectores">
+        <h2>Agrupar Selectores</h2>
+        <form class="form-agrupar-selectores">
+          <input type="text" name="nombre" placeholder="Escribe tu Nombre">
+          <input type="email" name="correo" placeholder="Escribe tu Correo">
+          <textarea name="" placeholder="Escribe tus Comentarios" cols="30" rows="10"></textarea>
+          <input type="submit">
+        </form>
+        <p>Saber agrupar los selectores para darles estilos en común facilita mucho el trabajo y lo hace más eficiente. Se escribe cada uno de los elementos y se van separando por una coma, luego hay un solo juego de llaves para todos.</p>
+        <a href="index.html#inicio">🚀</a>
+      </article>
+      <hr>
+      <article id="algoritmo">
+        <h2>Algoriitmo en CSS</h2>
+        <p>
+          El algoritmo en CSS es la manera en que el navegador va aplicando los estilos al documento HTML. Es vital este concepto para entender como se aplican y en algunas ocasiones, se sobreescriben las reglas de CSS. Las reglas básicas del algoritmo son tres y son las siguientes:
+        </p>
+        <ol>
+          <li>La Cascada</li>
+          <li>La Espeficidad</li>
+          <li>La Herencia</li>
+        </ol>
+        <h3>La Cascada</h3>
+        <p> La cascada es el mecanismo que tiene el navegador Web para ir aplicando los estilos. En base a esto toma tres aspectos en particular, que va aplicando en un orden de jerarquía; <br>
+        1- Origen del código; Primero el User Agent que son los estilos que trae por defecto el navegador. Segundo las personilizaciones que el usuario le hace a su navegador; y Tercero viene los estilos CSS que el autor define en su Documento HTML o "Estilos del Autor". Después el navegador va leyendo línea por línea, emepezando a plicar los estilos y cambiendolos conforme va leyendo una nueva instrucción. <br>
+        2- Especifidad; Esta viene muy asociada con la Cascada, es le peso que tiene cada selector (como un valor o puntaje). El estilo que queda es el que mayor peso tiene y sobreescribe por tanto a los estilos que se hayan definido con menos valor. Si dos selectores tienen un mismo peso, el estilo que se aplica es el último (por cascada). la especifidad se mide en cuatro digitos separados por comas y de derecha a izquierda y con valores que van desde cero, aumentando su peso, conforme el número de la izquierda es mayor.  <br>
+        Tabla de especifidad:
+        </p>
+        <ul>
+          <li>Etiquetas y pseudoelementos ......... 0,0,0,1</li>
+          <li>Calses atributos y pseudoclases ..... 0,0,1,0</li>
+          <li>Identificadores ................................. 0,1,0,0</li>
+          <li>Estilos en línea ................................ 1,0,0,0</li>
+          <li>Important ................. Rompe la especifidad</li>
+        </ul>
+        <h3>Practicando cascada y especifidad</h3>
+        <p>
+          Practicando en la hoja de estilos lo aprendido sobre cascada y especifidad en la siguiente cita:
+        </p>
+        <blockquote id="cita-marco" class="cita-marco" style="background-color: rebeccapurple">
+          Se tolerante con los demás y estricto contigo mismo. <cite>Marco Aurelio</cite>
+        </blockquote>
+        <p>
+          En primer paso se aplica un estilo a la etiqueta blockuote, en segundo a la misma etiqueta, pero asociada a la clase ".cita-marco"; en trecer solo a la clase (queda como estilo el anterior porque tiene mayor especifidad). En cuarto lugar se aplica estilo al identificador, pero a propósito se lo mezcla arriba en la cascada, y quedan los estilos de este porque es el que tiene más especifidad. por último se aplica un estilo a la etiqueta asociada a un identificador, quedando tanto por especifidad como por cascada.
+        </p>
+        <p>
+          Para demostrar que la especifidad rompe la cascada, al principio de las definiciones de estilos, se pone una etiqueta asociada al identificador y a la clase, y quedan estos estilos porque por más que esté al principio de la cascada, su especifidad es mayor a todos. pero como se terminó agregando una etiqueta style al mismo documento HTML, terminó aplicando los estilos pues tiene la mayor especifidad. Important rompe con la especifidad y con la cascada. En caso de dos !important, quedan los estilos del último por la cascada.
+        </p>
+        <h3>La Herencia</h3>
+        <p>
+          La Herencia es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor "inherit" (heredar), si queremos evitarla, podemos asignar otro valor o inicializarl la propiedad en cuestion con el valor "initial". Hay propiedades que no se heredan, por ejemplo bordes, fondos. La tipografía si se hereda
+        </p>
+        <blockquote id="cita-marcos" class="cita-marco" style="background-color: blueviolet;">
+          Se tolerante con los demás y estricto contigo mismo. <cite>Marco Aurelio</cite>
+        </blockquote>
+        <p>
+          Cuando usamos la misma cita de Marco Aurelio, primeros definimos una color de fondo y un tamaño distinto, y después con el valor inherit, volvemos a los valores heredaros por su etiqueta padre "blockquote". si uno varía por ejemplo el tamaño de letra de la etiqueta padre, el hijo "heredará" por defecto dicha propiedad.
+        </p>
+      </article>
+      <a href="index.html#inicio">🚀</a>
+      <hr>
+        <article>
+        <h2 id="reseteo">Reseteo y Normalización de Estilos</h2>
+          <p>
+            es una práctica que ya casi no es necesario hacer, pues los distintos navegadoresen la actualidad ya esán normalizados, pero de tener que resetear, es usual y conveniente hacerlo con librerías, la más recomendada se llama: Normalize.css. <br>El concepto de normalización en informátoca es establecer las buenas prácticas de algo. <br>
+            Se puede descargar con control s, y luego copiar en una carpeta, o directamente copiar y crear y luego vincular una página de estilos nueva.
+          </p>
+          <a href="index.html#inicio">🚀</a>
+          <hr>
+        </article>
+        <article>
+          <h2 id="prefijos">Prefijos de los Navegadores</h2>
+          <p>
+            HTML, CSS y JavaScripts son standars de los navegadores, por lo tanto no los debemos descargar en software para que funciones, son standar libres que viven en ellos. Los prefijos de los navegadores son usados para tecnologías experimentales y se identifican por alguna sigla o abreviatura en particular.
+          </p>
+          <ul>
+            <li>Navegadores microsoft <code><b>-ms-</b></code></li>
+            <li>Firefox <code><b>-moz-</b></code></li>
+            <li>Todos los demás Navegadores <code><b>-webkit-</b></code></li>
+          </ul>
+          <p>De esta forma quedarían en la hoja de Estilos: <br>   
+          <b>-webkit-user-select: none;</b> para el comun de los Navegadores. <br>
+          <b>-moz-user-select: none;</b> para firefox <br>
+          <b>-ms-user-select: none;</b> para navegadores microsoft <br>
+           <b>user-select: none;</b> cuando no necesitas poner prefijos.
+          </p>
+          <a href="index.html#inicio">🚀</a>
+          <hr>
+        </article>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*tables*/
+.table {
+  background-color: darkgoldenrod;
+  font-size: 3rem;
+  border-collapse: collapse;
+  margin-left: 50px;
+}
+
+.table-a {
+  background-color: pink;
+  font-size: 3rem;
+  border-spacing: 5px;
+  margin-left: 50px;
+}
+td,
+th {
+  border: medium solid black;
+}

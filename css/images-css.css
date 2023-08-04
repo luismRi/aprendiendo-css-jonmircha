@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*Imagenes*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+.card {
+  border: medium solid black;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background-color: goldenrod;
+}
+.card img {
+  height: 250px;
+  object-fit: cover;
+  object-position: right;
+}

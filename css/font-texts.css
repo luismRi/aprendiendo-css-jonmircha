@@ -1,0 +1,119 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*Estilos de fuentes*/
+.font {
+  font-family: cursive;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: oblique;
+  font-variant: small-caps;
+  line-height: 1.5;
+  font: italic small-caps bold 24px / 1.5 monospace;
+}
+/*Fuentes externas*/
+@font-face {
+  font-family: "Chalet";
+  src: url("../assets/multimedia/chalet.woff") format("woff");
+}
+.chalet {
+  font-family: "chalet", monospace;
+  font-display: swap;
+  border: thick solid green;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+@font-face {
+  font-family: "pecita";
+  src: url("../assets/mulmedia/peita.woff") format("woff");
+}
+.pecita {
+  font-family: "pecita", cursive;
+  font-display: swap;
+  border: thick solid blue;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  color: darkblue;
+  background-color: aquamarine;
+  border: thick solid firebrick;
+  padding: 1rem;
+}
+/*Estilos de texto*/
+.text {
+  background-color: burlywood;
+  border: thin solid brown;
+  padding: 1rem;
+  width: 100%;
+  font-size: 2rem;
+  text-align: left;
+  text-decoration: underline dotted blue;
+  text-indent: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+}
+.text-overflow {
+  background-color: burlywood;
+  border: thick solid brown;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem;
+  width: 50%;
+  font-size: 2rem;
+  text-align: left;
+  text-decoration: underline double crimson;
+  text-indent: 3rem;
+  text-overflow: ellipsis;
+}
+.white-space {
+  white-space: pre;
+}
+.special-character {
+  background-color: darkolivegreen;
+  border: thick solid violet;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 50%;
+  height: 400px;
+  word-break: break-all;
+  word-spacing: 1rem;
+  writing-mode: vertical-rl;
+}
+/*Iconos tipograficos*/
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}

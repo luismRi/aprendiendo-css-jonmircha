@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colores en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/colors.css" />
+  </head>
+  <body>
+    <h1 id="inicio">Colores en CSS</h1>
+    <p>
+      Podemos dar colores al fondo (background-color), podemos dar color al
+      texto (color), y color al borde (border-color). Hay cuatro formas
+      diferentes de dar estilos:
+    </p>
+    <ul>
+      <li>Por nombre de los colores.</li>
+      <li>Sistema Hexadecimal.</li>
+      <li>Sistema RGB.</li>
+      <li>Sistema HCL.</li>
+    </ul>
+    <a href="index.html#inicio">🚀</a>
+    <h3>Temario</h3>
+    <ul>
+      <li><a href="colors.html#colors-name">Colores por Nombre</a></li>
+      <li><a href="colors.html#hexadecimal-color">Sistema Hexadecimal</a></li>
+      <li><a href="colors.html#color-rgb">Sistema RGB</a></li>
+      <li><a href="colors.html#color-hsl">Sistema HSL</a></li>
+      <li>
+        <a href="colors.html#transparent-current"
+          >Valores de Transparent y Current-color</a
+        >
+      </li>
+      <li><a href="colors.html#opacity">Propiedad de Opacidad</a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <hr />
+    <h3>Círculo Cromático de los colores.</h3>
+    <img
+      src="assets/multimedia/Circulo-cromatico-1.png"
+      alt="Círculo Cromático"
+      width="600px"
+      height="600px"
+    />
+    <h2 id="colors-name">Colores por Nombre</h2>
+    <div class="color-by-name">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <p>
+      Los colores de HTML por Nombre, componen una larga lista comprendida por
+      los colores principales y sus respectivas gamas. La página de HTML Colors
+      Code, contiene una larga lista de colores por nombre con muestra de cada
+      uno de ellos (https://htmlcolorcodes.com/color-names/).
+    </p>
+    <p>
+      Cada color tiene sus correspondiente código en RGB y Hexadecimal. No
+      vienen en HCL porque es la última que se volvió standar para los
+      navegadores y no están actualizados. Cada color se puede convertir por lo
+      tanto, pues tiene su correspondiente en los otros sistemas.
+    </p>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="hexadecimal-color">Sistema Hexadecimal</h2>
+    <div class="color-hex">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <p>
+      Se llama Hexadecimal porque precisamente está basado en este sistema
+      compuesto de 16 dígitos (0123456789ABCDEF).
+    </p>
+    <p>
+      Son colores divididos en 6 dígitos: Los primeros dos representan el canal
+      del color rojo (red), los siguientes dos representan a los del canal verde
+      (green) y los dos últimos al canal azúl (blue). De ahí el nombre de RGB
+      (RedGreenBlue). Siempre empiezan con un numeral (#)
+    </p>
+    <p>
+      Cuando las parejas de digitos que hacen referencia a una determinada gama
+      de color, se repiten, se pueden simplificar a tres valores (solo se pueden
+      simplificar si las tres parejas coinciden).
+    </p>
+    <p>
+      Cuando ponemos la última letra FF es que está prendido al máximo el canal,
+      00 por lo contrario es apagarlo al máximo.
+    </p>
+    <div class="box-hex-1">Caja de prueba Rojo #F00</div>
+    <div class="box-hex-2">Caja de prueba Verde #0F0</div>
+    <div class="box-hex-3">Caja de prueba Azul #00F</div>
+    <p>
+      Actualmente en el sistema Hexadecimal también se puede controlar la
+      opacidad.
+    </p>
+    <div class="box-hex-opacity">Caja de prueba de Opacidad #0005</div>
+    <p>
+      Esta caja de prueba tiene un background-color negro con una opacidad del
+      50% (#00000050)
+    </p>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="color-rgb">Sistema RGB</h2>
+    <p>
+      Este sistema guarda mucha relación con el sistema Hexadecimal, y está
+      basado en los colores base RedGreenBlue, de ahí la abreviación RGB. Es por
+      lo tanto un sistema de tres canales, yendo desde 0 hasta 255 (el máximo
+      número que acepta es 255) siendo este la saturación del color en ese
+      canal.
+    </p>
+    <p>
+      Acepta ocho bits por canal (los bits son las unidades de información para
+      las computadoras). Como sabemos un bit solo puede tener dos valores: 0 /
+      1. Entonces para cada canal tenemos 8 posiciones; si elevamos 2 a la
+      octava potencia (dos es el número binario que entiende la computadora y 8
+      son las posiciones) nos da como resultado 256, (2*2*2*2*2*2*2*2 = 256) por
+      lo tanto debemos restar uno porque las computadoras empiezan a contar
+      desde 0.
+    </p>
+    <p>
+      Para implementar este estilo de colores, lo hacemos con una función reg:
+      rgb(). Cada canal de colores debe ir separado por comas
+    </p>
+    <div class="color-rgb">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <p>
+      Un número mayor en un canal significa que hay una mayor saturación de ese
+      color,
+    </p>
+    <div class="color-rgb-1">Caja de prueba Rojo rgb(255,0,0)</div>
+    <div class="color-rgb-2">Caja de prueba Verde rgb(0,255,0)</div>
+    <div class="color-rgb-3">Caja de prueba Azul rgb(0,0,255)</div>
+    <p>
+      Podemos aplicar opacidad también con el sistema RGB, pero debemos usar una
+      nueva función rgba() que agrega el canal alfa que es el que da la opacidad
+      y va del 0 al 100; usando números decimales
+    </p>
+    <div class="color-rgb-opacity">
+      Caja de opaciadad al 50% rgba(0, 0, 0, 0.5)
+    </div>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="color-hsl">Sistema HSL</h2>
+    <p>
+      Sistema basado en Tono, saturación y Luminocidad. Hue (matiz), Saturation
+      (saturación) y lightness (luminocidad).
+    </p>
+    <p>Es una función hsl().</p>
+    <p>
+      Es un sistema muy intituivo, que tiene ciertas características. Esta
+      estrechamente relacionado al circulo cromático.
+    </p>
+    <p>
+      El primer valor Hue forma un ángulo de 0° a 360° con colores que van
+      cambiando de gama conforme avanzan en el círculo.
+    </p>
+    <h3>Círculo Cromático:</h3>
+    <ol>
+      <li>0° Rojo - Red</li>
+      <li>60° Amarillo - Yellow</li>
+      <li>120° Verde - Green</li>
+      <li>180° Cyan - Cyan</li>
+      <li>240° Azul - Blue</li>
+      <li>300° Magenta - Magenta</li>
+    </ol>
+    <div class="circle-crhomatic">
+      <p>
+        El círculo cromático constituye una representación circular y ordenada
+        de los colores, de acuerdo a su matiz o tono. En la rueda de color
+        podemos encontrar: <br /><br />
+        Colores primarios: son aquellos que no pueden conseguirse a través de la
+        mezcla de otros colores y, a su vez, dan origen a todos los demás
+        colores a través de sus mezclas. Estos colores son el magenta, el azul y
+        el amarillo. <br /><br />
+        Colores secundarios: que obtenemos a través de la mezcla, en mismas
+        proporciones, de dos colores primarios. Por ejemplo, el verde es un
+        color secundario fruto de la mezcla del azul y el amarillo. <br /><br />
+        Colores terciarios: los conseguimos al mezclar un color primario con un
+        secundario adyacente (situado en una posición cercana a este en la rueda
+        cromática). Como ejemplo tendríamos el verde azulado o el rojo. El
+        círculo cromático lo construimos a partir de los tres colores primarios,
+        obteniendo el resto de tonos a partir de las distintas mezclas que
+        hacemos entre ellos. En este caso, hemos representado 12 tonalidades,
+        pero las posibilidades son prácticamente infinitas.
+      </p>
+    </div>
+    <img
+      src="assets/multimedia/circulo-cromatico_opti.jpg"
+      alt="Circulo Cromático con colores secundarios y terciarios"
+      width="700px"
+      height="700 px"
+    />
+    <p>
+      Segundo valor Saturation: Es la intensidad del color, representado en
+      porcentajes. Donde 0% es en escala de grises y 100% es el color puro.
+    </p>
+    <p>
+      Siempre debemos representar el signo %, así su valor sea 0, cada valor en
+      el sistema HSL debe ir separado por comas.
+    </p>
+    El tercer valor lightness: nos da la luminosidad del color, si queremos que
+    tienda hacia blanco o hacia negro. También se representa con porcentajes con
+    % para negro y 100% el blanco.
+    <div class="color-hsl">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <div class="color-hsl-1">Caja de prueba HSL Amarillo hsl(60,100%,50%)</div>
+    <div class="color-hsl-2">Caja de prueba HSL Cyan hsl(180,100%,50%)</div>
+    <div class="color-hsl-3">Caja de prueba HSL Magenta hsl(300,100%,50%)</div>
+    <p>
+      El sistema HSL tambièn tiene su variante para opacidad, usando la función
+      hsla() con cuatro parámetros.
+    </p>
+    <div class="color-hsl-opacity">
+      Caja de prueba HSL Verde hsla (75,100%,50%,0.5)
+    </div>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="color-transparent-current">Valores Transparent & Current-color</h2>
+    <div class="color-transparent-current">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
+        debitis totam tempore quibusdam ad quo molestias. Sit dicta sapiente
+        consequatur culpa perspiciatis cumque aspernatur. Nulla ipsum fugiat
+        ipsa eligendi earum!
+      </p>
+    </div>
+    <p>
+      Para quitar la vista de un color se usa el valor transparent, esta es
+      aceptada en cualquier sistema de colores que usemos.
+    </p>
+    <p>
+      Valor Transparent: Es color transparente, lo que equivale a aplicar
+      rgba(0, 0, 0, 0).
+    </p>
+    <p>
+      El valor currentColor: Hereda por defecto el valor del navegador o el
+      asignado de la propiedad color (la que da color al texto). La busca del
+      ancestro más cercano que tenga asignada esta propiedad, que en el caso de
+      nuestra caja de muestra es el color de letra, por eso esta no se
+      distingue, pero si pasamos el cursor, podemos ver claramente que ahí está.
+    </p>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="opacity">Propiedad de Opacidad</h2>
+    <p>
+      La propiedad de opacidad aplica el nivel de opacidad, pero no solo es para
+      los colores, sino para todas las propiedades CSS que hayamos definido en
+      HTML.
+    </p>
+    <p>
+      La propiedad de opacidad, al igual que en los sistemas de colores, también
+      va de 0 a 1, siendo 1 el valor por defecto osea opacidad al 100%.
+    </p>
+    <div class="color-opacity">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <div class="color-no-opacity">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
+        nihil quibusdam aut, sequi modi laboriosam, mollitia ut reiciendis
+        distinctio ad. Non praesentium sunt eligendi earum saepe fugiat in
+        molestias?
+      </p>
+    </div>
+    <p>La misma caja con los mismos estilos, menos el de opacidad al 50%.</p>
+    <a href="colors.html#inicio">Inicio</a>
+    <hr />
+    <hr />
+    <a href="index.html#inicio">🚀</a>
+  </body>
+</html>
