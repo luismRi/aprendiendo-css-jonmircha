@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efectos Visuales en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/visual-effects.css" />
+  </head>
+  <body>
+    <h1>Efectos Visuales en CSS</h1>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li><a href="visual-effects.html#shadows">Sombras</a></li>
+      <li><a href="visual-effects.html#gradients">Degradados</a></li>
+      <li><a href="visual-effects.html#filter">Filtros</a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+    <h2 id="shadows">Sombras</h2>
+    <h3>Sombra de Caja</h3>
+    <p>
+      Se pueden aplicar tres tipos distintos de sombras: a la caja, al texto y a
+      través de un filtro (drop-shadow).
+    </p>
+    <p>
+      Box-shadow: Maneja valores en "x", en "y", desenfoque radial
+      (redius-blur), expansión del desenfoque (spread-blur), y color, todo
+      separado pur un espacio. Adicionalmente podemos indicar, si aplicamos
+      sombra interior o externa a la caja.
+    </p>
+    <div class="box box-shadow"></div>
+    <p>Caja con valores de sombra positivos: se desplaza hacia la derecha.</p>
+    <div class="box box-shadow-1"></div>
+    <p>Caja con valores negativos, la sombra se desplaza hacia la izquierda.</p>
+    <div class="box box-shadow-inset"></div>
+    <p>Caja con sombra interna (inset).</p>
+    <h3>Sombra de Texto</h3>
+    <div class="box text-shadow">
+      <p>Sombra de texto</p>
+    </div>
+    <p>
+      La propiedad text-shadow tiene tres valores: para "x" e "y", blur-radius y
+      color.
+    </p>
+    <h3>Sombras Múltiples</h3>
+    <div class="box box-shadow-multiple">
+      <p>Sombras múltiples</p>
+    </div>
+    <p>Para aplicar sombras múltiples, simplemente se separan por comas.</p>
+    <div class="box text-shadow-multiple">Sombra de texto</div>
+    <h3>Drop-shadow</h3>
+    <p>
+      Esta propiedad se aplica a imágenes con transparencia alfa. Tiene
+      movimiento en "x", en "y", blur y color.
+    </p>
+    <div class="box drop-shadow">
+      <img src="assets/multimedia/delfin.png" alt="delfin" />
+    </div>
+    <p>
+      En este caso la sombra no aplica dentro de la imagen, porque el
+      drop-shadow está detectando que no es una imagen con transparencia alpha,
+      y solo la aplica alrededor de ella.
+    </p>
+    <a href="visual-effects.html#inicio"></a>
+    <hr />
+    <h2 id="gradients">Degradados</h2>
+    <h3>Página de degradados</h3>
+    <a href="https://cssgradient.io/" target="_blank">CSSgradients</a>
+    <p>
+      Hay tres tipos de degradados: lineales, radiales y cónicos. Aplican sobre
+      el color de fondo (aplicado como background-image).
+    </p>
+    <p>
+      Son funciones que aceptan varios parámetros de colores separados por
+      comas.
+    </p>
+    <h3>Lineal</h3>
+    <div class="box linear-gradient"></div>
+    <p>
+      Como parámetro adicional, aceptan grados, y el degradado irá girando
+      respecto de ellos. Este parámetro acepta también palábras específicas como
+      por ejemplo to right (se alineará a la derecha), botton left (alineado
+      abajo a la izquierda), etc.
+    </p>
+    <div class="box linear-gradient-1"></div>
+    <p>Tambíen aceptan medidas para cada uno de los colores en porcentajes.</p>
+    <div class="box linear-gradient-2"></div>
+    <p>
+      Creando la bandera de Italia con gradientes con porcentajes definidos.
+    </p>
+    <div class="box linear-flag"></div>
+    <h3>Radial</h3>
+    <p>
+      Por default el degradado radial es circular, comenzando desde el centro.
+    </p>
+    <div class="box radial-gradient"></div>
+    <p>Podemos manejar el tamaño del círculo y el porcentaje de colores.</p>
+    <div class="box radial-gradient-1"></div>
+    <p>Podemos indicar desde donde queremos que comience el círculo.</p>
+    <div class="box radial-gradient-direction"></div>
+    <p>
+      Podemos hacer una elipsis poniendo elipsis como propiedad (la propiedad
+      por defecto es circle). Debemos indicar las medidas de la elipse en "x" y
+      en "y".
+    </p>
+    <div class="box radial-gradient-elipsis"></div>
+    <p>Creando la bandera de Japón con degradado circular.</p>
+    <div class="box radial-flag"></div>
+    <h3>Cónico</h3>
+    <p>
+      Genera una proyección cónica. Es una propiedad más nueva que las
+      anteriores.
+    </p>
+    <div class="box conic-gradient"></div>
+    <p>
+      La proporción en los colores, se puede controlar con porcentajes y también
+      con grados
+    </p>
+    <div class="box conic-gradient-1"></div>
+    <p>
+      Como cada color empiesa exactamente donde terminó el anterior, no hay una
+      degradado.
+    </p>
+    <div class="box conic-gradient-2"></div>
+    <p>
+      Con la palábra from, podemos hacer que los colores se vayan invirtiendo,
+      porque estamos indicando que la propiedad comience "desde".
+    </p>
+    <p>Creando la bandera de la antigua Checoslovaquia.</p>
+    <div class="box conic-gradient-flag"></div>
+    <h3>Repetir Degradados</h3>
+    <p>Hay tres funciones auxiliares que nos permiten escribir patrones</p>
+    <p>Función repeating-linear-gradient()</p>
+    <div class="box repeat-gradient-linear"></div>
+    <p>Función repeating-radial-gradient()</p>
+    <div class="box repeat-gradient-radial"></div>
+    <p>Función repeating-conic-gradient()</p>
+    <div class="box repeat-gradient-conic"></div>
+    <h3>Gráficas con degradados</h3>
+    <p>Grafica de pastel. Con border-radius: 50%</p>
+    <div class="box chart-gradient"></div>
+    <p>Gráfica de dona. Con border-radius y border-conic combinados.</p>
+    <div class="box donut-gradient"></div>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="filter">Filtros</h2>
+    <p>
+      Los filtros se aprecian mejor, cuando se aplican a imagenes. Hay varios
+      tipos de filtros:
+    </p>
+    <h3>Tipos de filtros</h3>
+    <h4>Blur (desenfoque)</h4>
+    <p>
+      El desenfoque va desde 0 a 1, siendo este valor el de máximo desenfoque.
+    </p>
+    <article class="card blur">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Brightnes</h4>
+    <p>
+      Brightnes tien valores de 0 a 1 siendo este último el 100% del brillo,
+      cuando ponemos valores superiores a 1, vamos sobre exponiendo la luz
+      "quemando la imagen".
+    </p>
+    <article class="card brightens">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <article class="card brightnes-1">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Contraste</h4>
+    <p>
+      Sus valores son de 0 (tono gris) a 1. De igual manera, con valores
+      superiores a uno se sobre satura el contraste.
+    </p>
+    <article class="card contrast">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Escala de grises</h4>
+    <p>De 0 a 1 donde 1 es totalmente gris.</p>
+    <article class="card grayscale">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Sepia</h4>
+    <p>Es similar a la escala de grises</p>
+    <article class="card sepia">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Rotación de colores</h4>
+    <p>
+      hue-rotate va rotando en grados en la rueda de escala de colores, siendo
+      0° el rojo, 120° el verde, 240° el azúl.
+    </p>
+    <article class="card rotate">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Inversion</h4>
+    <p>
+      Invierte los colores 0 es normal y 1 es el valor máximo con un efecto de
+      negativo (los valores intermedios no aplican)
+    </p>
+    <article class="card invert">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Opacidad</h4>
+    <p>0 es totalmente transparente y 1 totalmente opaco.</p>
+    <article class="card opacity">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <article class="card">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h4>Saturación</h4>
+    <p>Con valores mayores a 1 se sobre saturan los colores.</p>
+    <article class="card saturation">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+  </body>
+</html>

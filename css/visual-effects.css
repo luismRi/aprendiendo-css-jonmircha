@@ -1,0 +1,233 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+/*sombras de caja*/
+.box {
+  border: thick solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+.box-shadow {
+  color: navy;
+  box-shadow: 1rem 1rem 1rem 1rem;
+  margin-bottom: 3rem;
+}
+.box-shadow-1 {
+  color: red;
+  margin-top: 3rem;
+  box-shadow: -1rem -1rem 1rem 1rem;
+}
+.box-shadow-inset {
+  color: green;
+  box-shadow: 1rem 1rem 1rem 1rem inset;
+}
+/*sombras de texto*/
+.text-shadow {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  text-shadow: -1rem -1rem 0.3rem hotpink;
+}
+.box-shadow-multiple {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  box-shadow: 1rem 1rem 1rem 1rem navy, 1rem 1rem 1rem 1rem green inset,
+    -1rem -1rem 0.75rem 2rem hotpink;
+}
+.text-shadow-multiple {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 2rem;
+  text-shadow: -1rem -1rem 0.5rem blueviolet, 1rem 1rem 0.3rem coral;
+}
+/*drop-shadow*/
+.drop-shadow {
+  width: 400px;
+  height: auto;
+}
+.drop-shadow img {
+  max-width: 100%;
+  max-height: auto;
+  filter: drop-shadow(1rem 1rem 1rem skyblue);
+}
+/*degradados*/
+.linear-gradient {
+  background-image: linear-gradient(red, green, blue);
+  margin-bottom: 2rem;
+}
+.linear-gradient-1 {
+  background-image: linear-gradient(20deg, red, green, blue);
+  margin-bottom: 2rem;
+}
+.linear-gradient-2 {
+  background-image: linear-gradient(to right, red 30%, green, blue);
+  margin-bottom: 2rem;
+}
+.linear-flag {
+  background-image: linear-gradient(
+    to right,
+    green 33%,
+    white 34% 67%,
+    red 68%
+  );
+  margin-bottom: 2rem;
+}
+.radial-gradient {
+  background-image: radial-gradient(cyan, magenta, yellow);
+}
+.radial-gradient-1 {
+  background-image: radial-gradient(4rem, cyan 60%, magenta 50%, yellow);
+}
+.radial-gradient-direction {
+  background-image: radial-gradient(100px at top, cyan, magenta, yellow);
+}
+.radial-gradient-elipsis {
+  background-image: radial-gradient(
+    ellipse 100px 60px,
+    cyan 35%,
+    magenta 60%,
+    yellow
+  );
+}
+.radial-flag {
+  background-image: radial-gradient(100px, red 50%, white 50%);
+}
+/*cónico*/
+.conic-gradient {
+  background-image: conic-gradient(red, green, blue);
+}
+.conic-gradient-1 {
+  background-image: conic-gradient(
+    red 0deg 90deg,
+    green 90deg 240deg,
+    blue 240deg
+  );
+}
+.conic-gradient-2 {
+  background-image: conic-gradient(
+    from 90deg,
+    red 0deg 90deg,
+    green 120deg 240deg,
+    blue 300deg
+  );
+}
+.conic-gradient-flag {
+  background-image: conic-gradient(
+    from 90deg,
+    red 0deg 120deg,
+    white 120deg 240deg,
+    blue 240deg
+  );
+}
+/*Repetición de degradados*/
+.repeat-gradient-linear {
+  background-image: repeating-linear-gradient(
+    red 0px 7px,
+    green 10px 17px,
+    blue 20px 27px
+  );
+}
+.repeat-gradient-radial {
+  background-image: repeating-radial-gradient(
+    circle 4rem,
+    cyan 0px 10px,
+    magenta 10px 20px,
+    yellow 20px 30px
+  );
+}
+.repeat-gradient-conic {
+  background-image: repeating-conic-gradient(
+    red 0% 8%,
+    yellow 8% 16%,
+    black 16% 24%
+  );
+}
+.chart-gradient {
+  background-image: conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+}
+.donut-gradient {
+  background-image: radial-gradient(white 35%, black 36%, transparent 39%),
+    conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+}
+/*filtros*/
+.card {
+  border: thick solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 250px;
+  margin-bottom: 1rem;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+.blur {
+  filter: blur(0.25rem);
+}
+.brightens {
+  filter: brightness(0.25);
+}
+.brightnes-1 {
+  filter: brightness(4);
+}
+.contrast {
+  filter: contrast(2);
+}
+.grayscale {
+  filter: grayscale(1);
+}
+.sepia {
+  filter: sepia(1);
+}
+.rotate {
+  filter: hue-rotate(240deg);
+}
+.invert {
+  filter: invert(1);
+}
+.opacity {
+  filter: opacity(0.5);
+}
+.saturation {
+  filter: saturate(4);
+}
