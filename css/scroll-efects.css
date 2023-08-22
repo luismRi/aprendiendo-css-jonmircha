@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  color: white;
+  background-color: skyblue;
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+  text-align: center;
+  border-color: brown;
+  border-style: solid;
+}
+h2 {
+  color: rgb(255, 80, 240);
+  background-color: aquamarine;
+  text-align: center;
+  border-style: dashed;
+  border-color: rgb(255, 80, 240);
+}
+.black {
+  color: black;
+}
+/*efectos de scroll*/
+body,
+h2 {
+  margin-top: 0;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  max-width: 50%;
+  height: auto;
+}
+[id] {
+  scroll-margin-top: 17ex;
+}
+.header {
+  position: sticky;
+  top: 0;
+  padding: 0.25rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+.header a {
+  margin: 0 1rem;
+  color: #00c4d6;
+}
+.header a:hover {
+  color: #e94bb4;
+}
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  color: #d9e8f0;
+  background-color: #1e2345;
+  padding: 2rem;
+}
+.slide:nth-child(even) {
+  background-color: #108eb4;
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movimiento en CSS</title>
+    <link rel="icon" href="assets/multimedia/icons8-cat-head-100.png" />
+    <link rel="stylesheet" href="css/motion.css" />
+  </head>
+  <body>
+    <h1>Movimiento en CSS</h1>
+    <h3 id="inicio">Temario</h3>
+    <ul>
+      <li><a href="motion.html#transitions">Transiciones</a></li>
+      <li><a href="motion.html#transforms">Transformaciones</a></li>
+      <li><a href="motion.html#animations">Animaciones</a></li>
+    </ul>
+    <a href="index.html#inicio">🚀</a>
+    <hr />
+    <section class="transitions">
+      <h2 id="transitions">Transiciones</h2>
+      <p>Transitions tiene varias propiedasdes:</p>
+      <ul>
+        <li>transition-property</li>
+        <li>transition-duration</li>
+        <li>
+          transition-timing-function: none ease ease-in ease-out ease-in-out
+          steps
+        </li>
+        <li>transition-delay</li>
+        <li>transition: property duration timing-function delay</li>
+      </ul>
+      <p>
+        Para apreciar las transiciones, debemos definir un estado hober. Se van
+        aplicando en orden, primero en la propiedad que se va a implementar,
+        duración y tipo de transición. De no poner, el estado hober hará una
+        transición súbita.
+      </p>
+      <p>
+        para poder aplicar varias propiedades de transición a un elemente,
+        podemos usar all, que las aplicará igual para todas. Solo que no es una
+        práctica recomendada pues el navegador continuamente debe recargar todas
+        las propiedades del elemento en cuestion.
+      </p>
+      <h3>Página de MDN para propiedades animables.</h3>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"
+        target="_blank"
+        >Animatable CSS properties</a
+      ><br /><br /><br />
+      <div class="box"></div>
+      <p>
+        Para lograr que las propiedades vayan activandose en distintos tiempos,
+        no podemos usar all, para eso hacemos uso de de la coma para separarlas.
+      </p>
+      <article class="card">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+    </section>
+    <a href="motion.html#inicio">Inicio</a>
+    <hr />
+    <section class="transform">
+      <h2 id="transforms">Transformaciones</h2>
+      <p>Hay dos tipos de transformaciones en CSS: en 2D y en 3D.</p>
+      <p>
+        Se ve de forma estática, entonces para hacerla más interesante, lo mejor
+        es previamente convinarla con la propiedad transform.
+      </p>
+      <h3>Transformaciones en 2D</h3>
+      <p>Traslación:</p>
+      <article class="card transform-2d">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Escala:</p>
+      <article class="card transform-2d-scale">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Rotación:</p>
+      <article class="card transform-2d-rotation">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Sesgado:</p>
+      <article class="card transform-2d-skew">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>
+        Todas las transformaciones en 2D funcionan para X e Y, se puede usar el
+        shorthand. El eje Z solo se aprecia en el el sesgado, pues este es un
+        eje de profundidad, por lo cual le dará mayor interacción en 3D.
+      </p>
+      <p>
+        Una transformación especial llamada "Matrix" ocupa seis valores
+        (scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY()) En
+        base a valores de números enteros.
+      </p>
+      <p>Matrix:</p>
+      <article class="card transform-2d-matrix">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Documentación para matrix:</p>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix"
+        target="_blank"
+        >Matrix</a
+      >
+      <h3>Transformaciones en 3D</h3>
+      <p>
+        la pantalla de la computadora es 2D, por lo que hacer transformaciones
+        en 3D son ilusiones ópticas, para poder desarrollarlas debemos activar
+        en primer lugar, la perspectiva perspective().
+      </p>
+      <p>TraslaciónZ (acercamiento o alejamiento)</p>
+      <article class="card transform-3d">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Rotación:</p>
+      <p>
+        Existe el shorhand, pero recibe números enteros separados por comas y
+        por último, los grados a los cuales queremos rotar.
+        rotate3d(1,1,1,45deg).
+      </p>
+      <article class="card transform-3d-rotate">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>matrix 3D: (recibe 16 valores en números enteros).</p>
+      <article class="card transform-3d-matrix">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Documentación transformaciones en 3D:</p>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d"
+        target="_blank"
+        >Transformaciones 3D</a
+      >
+      <h3>Transform-origin</h3>
+      <p>
+        La propiedad origin recibe hasta tres valores "x, y, z". Su valor por
+        defecto es 50% en x, 50% en y y 0 en z.
+      </p>
+      <p>
+        Si aplicamos dos valores, será una transformación en 2D y el primero
+        será para x y el segundo para y. Cuando sea un solo valor, este será x y
+        tomará y al 50% pues ese es su valor por defecto. Recibe palabras clave.
+      </p>
+      <article class="card transform-origin">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <h3>Flip Cards</h3>
+      <p>
+        Propiedad backface-visibility que funciona con 3d, por lo que se debe
+        activar la perspectiva y transform-style, que determina si los hijos de
+        un elemento que tiene perspectiva en 3 dimensiones. Su valor por defecto
+        es flat, que trabaja en el mismo plano, pero si queremos que los hijos
+        tengan su propia perspectiva independiente a la del padre, le ponemos el
+        valor: reserve-3d.
+      </p>
+      <p>Sin transform-origin.</p>
+      <article class="flip-card-1">
+        <div class="flip-face flip-front">
+          <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+        </div>
+        <div class="flip-face flip-back">
+          <img src="assets/multimedia/niña-playa.jpg" alt="Niña en la playa" />
+        </div>
+      </article>
+      <p>Con transform-origin.</p>
+      <article class="flip-card-2">
+        <div class="flip-face flip-front">
+          <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+        </div>
+        <div class="flip-face flip-back">
+          <img src="assets/multimedia/niña-playa.jpg" alt="Niña en la playa" />
+        </div>
+      </article>
+    </section>
+    <a href="motion.html#inicio">Inicio</a>
+    <hr />
+    <section class="animations">
+      <h2 id="animations">Animaciones</h2>
+      <p>
+        La animación es una propiedad CSS que tiene múltiples valores: name,
+        duration, timing-function, delay, iteration-count, direction, fill-mode
+        y play-state. En el shorthand van en ese orden y separadas por espacios.
+        Name y duration son obligatorias.
+      </p>
+      <p>Opciones obligatorias, name y duration:</p>
+      <article class="card my-animation">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>Las siguientes propiedades son las opcionales:</p>
+      <p>Página para hacer animaciones Cubic Bezier</p>
+      <a href="https://cubic-bezier.com" target="_blank">Cubic Bazier</a>
+      <article class="card my-animation-1">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>
+        animation-fill-mode con valor forwards, se queda con los valores del
+        final de la animación. Con valor backwards comienza con los del
+        principio, y both aplica al mismo tiempo ambos valores.
+      </p>
+      <p>
+        animation-play-state se usa combinado con javascript, para poder
+        interactuar con un boton de encendido y pausado.
+      </p>
+      <h3>Animaciones con fotogramas intermedios.</h3>
+      <p>Se logran agregando valores intermedios en el keyframe.</p>
+      <article class="card my-animation-2">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>La linea de tiempo la vemos como porcentajes de la animación.</p>
+      <h3>Animaciones múltiples</h3>
+      <article class="card animation-multiple">
+        <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de Sol" />
+      </article>
+      <p>
+        Para aplicar animaciones múltiples, se van agregando keyframes con las
+        distintas animaciones, luego en la definición se van separando por
+        comas.
+      </p>
+    </section>
+  </body>
+</html>
+<section class="motion-examples">
+    <h2>Ejemplos de efectos de Moviemiento en CSS</h2>
+    <h3>FadeIn / FadeOut</h3>
+    <div class="fade-in">🧔🏻</div>
+    <div class="fade-out">🧔🏻</div>
+    <h3>Sacudir</h3>
+    <div class="shake">☕</div>
+    <h3>Pulsaciones</h3>
+    <div class="pulse">❤️</div>
+    <div class="pulse">🦊 kEnAi 🦊</div>
+    <h3>Dibujando y animando con CSS</h3>
+    <h4>Corazón</h4>
+    <div class="pulse">Eres el CSS de mi HTML</div>
+    <div class="heart"></div>
+    <h4>Spinner / Loader</h4>
+    <div class="spinner"></div>
+    <h3>Botones Animados</h3>
+    <button class="btn anim-bottom to-left">Animación Izquierda</button>
+    <button class="btn anim-bottom to-center">Animación Centro</button>
+    <button class="btn anim-bottom to-right">Animación Derecha</button>
+    <button class="btn anim-bg-gradient">Fondo con Gradiente</button>
+    <h3>Menú de Pestañas (Tabs)</h3>
+    <nav class="tabs-menu">
+      <input type="radio" id="tab-1" name="tabs">
+      <label for="tab-1">Sección 1</label>
+      <input type="radio" id="tab-2" name="tabs">
+      <label for="tab-2">Sección 2</label>
+      <input type="radio" id="tab-3" name="tabs">
+      <label for="tab-3">Sección 3</label>
+      <input type="radio" id="tab-4" name="tabs">
+      <label for="tab-4">Sección 4</label>
+      <div class="tab-bg-hover"></div>
+    </nav>
+    <h3>Menu Off Canvas</h3>
+    <input type="checkbox" class="off-canvas-btn">
+    <label class="off-canvas-burger"></label>
+    <nav class="off-canvas-menu">
+      <div class="off-canvas-menu-container">
+        <a href="#" class="off-canvas-link">Sección 1</a>
+        <a href="#" class="off-canvas-link">Sección 2</a>
+        <a href="#" class="off-canvas-link">Sección 3</a>
+        <a href="#" class="off-canvas-link">Sección 4</a>
+        <a href="#" class="off-canvas-link">Sección 5</a>
+      </div>
+    </nav>
+    <h3>Ventana Modal</h3>
+    <a href="#modal-1">Abrir Modal</a>
+    <article id="modal-1" class="modal">
+      <div class="modal-container">
+        <a href="#cerrar" class="modal-close">X</a>
+        <h2>Esto es una ventana modal</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim amet quibusdam necessitatibus quia magni nam
+          asperiores rem eum corrupti vero modi officia at, commodi, fugit facilis? Qui, sit iure. Blanditiis!
+        </p>
+        <ul>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+          <li><a href="">Enlace</a></li>
+        </ul>
+      </div>
+    </article>
+    <h3>Star Wars Intro</h3>
+    <article class="star-wars">
+      <div class="star-wars-container">
+        <h2 class="title-episode">Episode III</h2>
+        <h3>REVENGE OF THE SITH</h3>
+        <p>
+          War! The Republic is crumbling
+          under attacks by the ruthless
+          Sith Lord, Count Dooku.
+          There are heroes on both sides.
+          Evil is everywhere.
+        </p>
+        <p>
+          In a stunning move, the
+          fiendish droid leader, General
+          Grievous, has swept into the
+          Republic capital and kidnapped
+          Chancellor Palpatine, leader of
+          the Galactic Senate.
+        </p>
+        <p>
+          As the Separatist Droid Army
+          attempts to flee the besieged
+          capital with their valuable
+          hostage, two Jedi Knights lead a
+          desperate mission to rescue the
+          captive Chancellor....
+        </p>
+      </div>
+    </article>
+  </section>
+  <a href="motion.html#inicio">Inicio</a>
+  <hr>
+ <a href="index.html#inicio">🚀</a>
+</body>
+
+</html>

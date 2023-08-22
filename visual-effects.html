@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="dark-mode" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,18 @@
       <li><a href="visual-effects.html#shadows">Sombras</a></li>
       <li><a href="visual-effects.html#gradients">Degradados</a></li>
       <li><a href="visual-effects.html#filter">Filtros</a></li>
-      <li><a href=""></a></li>
+      <li><a href="visual-effects.html#bk-filter">Filtros a los fondos</a></li>
+      <li><a href="visual-effects.html#dark-mode">Efecto de modo oscuro</a></li>
+      <li>
+        <a href="visual-effects.html#blend-modes"
+          >Modos de mezcla para imagenes</a
+        >
+      </li>
+      <li>
+        <a href="visual-effects.html#bk-mezcla">Modos de mezcla para fondos</a>
+      </li>
+      <li><a href="visual-effects.html#mask">Máscaras</a></li>
+      <li><a href="visual-effects.html#shape">Formas</a></li>
     </ul>
     <a href="index.html#inicio">🚀</a>
     <hr />
@@ -155,8 +166,12 @@
     <p>
       El desenfoque va desde 0 a 1, siendo este valor el de máximo desenfoque.
     </p>
-    <article class="card blur">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="blur"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Brightnes</h4>
     <p>
@@ -164,62 +179,352 @@
       cuando ponemos valores superiores a 1, vamos sobre exponiendo la luz
       "quemando la imagen".
     </p>
-    <article class="card brightens">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="brightens"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
-    <article class="card brightnes-1">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="brightnes-1"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Contraste</h4>
     <p>
       Sus valores son de 0 (tono gris) a 1. De igual manera, con valores
       superiores a uno se sobre satura el contraste.
     </p>
-    <article class="card contrast">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="contrast"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Escala de grises</h4>
     <p>De 0 a 1 donde 1 es totalmente gris.</p>
-    <article class="card grayscale">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="grayscale"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Sepia</h4>
     <p>Es similar a la escala de grises</p>
-    <article class="card sepia">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="sepia"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Rotación de colores</h4>
     <p>
       hue-rotate va rotando en grados en la rueda de escala de colores, siendo
       0° el rojo, 120° el verde, 240° el azúl.
     </p>
-    <article class="card rotate">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="rotate"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Inversion</h4>
     <p>
       Invierte los colores 0 es normal y 1 es el valor máximo con un efecto de
       negativo (los valores intermedios no aplican)
     </p>
-    <article class="card invert">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="invert"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <h4>Opacidad</h4>
     <p>0 es totalmente transparente y 1 totalmente opaco.</p>
-    <article class="card opacity">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="opacity"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <article class="card">
       <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
     </article>
     <h4>Saturación</h4>
     <p>Con valores mayores a 1 se sobre saturan los colores.</p>
-    <article class="card saturation">
-      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    <article class="card">
+      <img
+        class="saturation"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
+    </article>
+    <h3>Filtros múltiples</h3>
+    <p>
+      Podemos agregar varios filtros a la imagen, separando cada función por un
+      espacio.
+    </p>
+    <article class="card">
+      <img
+        class="filter-multiples"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
     </article>
     <a href="visual-effects.html#inicio">Inicio</a>
     <hr />
-
+    <h2 id="bk-filter">Filtros a los fondos</h2>
+    <p>
+      Podemos aplicar todas las propiedades de los fondos a las imagenes, al
+      color de fondo, solo que en vez de background es backdrop-filter o filtro
+      de fondo.
+    </p>
+    <p>
+      Aplicamos filtros al fondo de uno en uno y además, sombra al texto y a la
+      caja contenedora.
+    </p>
+    <article class="card relative">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+      <div class="backdrop-filter">
+        <h3>Puesta de sol</h3>
+      </div>
+    </article>
+    <p>Aplicando los filtros de manera múltiple.</p>
+    <article class="card relative">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+      <div class="backdrop-filter-multiple">
+        <h3>Puesta de sol</h3>
+      </div>
+    </article>
+    <h2 id="dark-mode">Efecto de modo oscuro</h2>
+    <p>
+      Filtro de inversion para dar un efecto de dark, light. para eso debemos
+      dar una clase al html (en este caso una clase llamada dark-mode)
+    </p>
+    <p>
+      Por más que el navegador por defecto tiene un fondo blanco para la
+      pantalla y letras de color negro, debemos especificarlo explicitamente
+      para que el filtro de inversion funcione correctamente.
+    </p>
+    <p>
+      Es importante destacar que esta es una técnica rápida y usada con los
+      filtros, por lo que las imagenes se ven afectadas. Para poder arreglar
+      esto, a la clase dark-mode img, le volvemos a dar un filtro de inversion.
+    </p>
+    <p>
+      obviamente, para que este efecto se aplique correctamente, debemos agregar
+      un botón de apagado y encendido que funcione con javascript, por lo que,
+      los estilos en CSS quedan comentados para que no apliquen y afecten a todo
+      el documento HTML.
+    </p>
+    <p>
+      Esta forma simple de aplicar filtros dark mode, se puede aplicar para
+      páginas de texto simples.
+    </p>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="blend-modes">Modos de mezcla para imagenes</h2>
+    <p>
+      Se trata de ir super poniendo imagenes con blend-mode sobre las imagenes
+      en HTML.
+    </p>
+    <article class="card relative-mezcla blend-modes">
+      <img src="assets/multimedia/niña-playa.jpg" alt="Niña en la playa" />
+      <img
+        class="absolute"
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de sol"
+      />
+    </article>
+    <p>
+      Esta propiedad va haciendo que las distintas imagenes se vayan fusionando
+      entre si. blend-mode tiene una variada cantidad de algoritmos para ir
+      haciendo distintos tipos de mezclas.
+    </p>
+    <p>
+      Hay más de 15 variedades de mezcla para hacer fusionar de la mejor y más
+      harmoniosa forma nuestras imagenes (en este caso es una darcken u
+      oscurecer). Haciendo que la imagen de la niña se vea como mirando el
+      hermoso atardecer entre las palmeras.
+    </p>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="bk-mezcla">Modos de mezcla para fondos</h2>
+    <p>
+      En este caso, la mezcla se hace en la imagenes de fondo, a través de la
+      propiedad background-image. En este caso son las mismas imagenes puestas
+      como imagen de fondo y con valor overflay (cubrir).
+    </p>
+    <article class="card bg-blend-modes"></article>
+    <p>
+      La lista para aplicar la propiedad es la misma tanto para imagenes, como
+      para imagenes de fondo y es la siguiente:
+    </p>
+    <p>
+      color, color-burn, color-dodge, darken, difference, exclusion, hard-light,
+      hue, lighten, luminosity, multiply, overlay, saturation, screen,
+      soft-light.
+    </p>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="mask">Máscaras</h2>
+    <p>Página de ayuda para dibujar polígonos de enmascaramiento:</p>
+    <a href="https://bennettfeely.com/clippy/" target="_blank"
+      >CSS clip-path maker</a
+    >
+    <p>
+      Hacemos enmascaramientos con la propiedad clip-path (ruta de ecorte). Esta
+      tiene cuatro funciones: circle, ellipse, inset y polygon. El
+      enmascaramiento es mostrar la parte visible de la imagen.
+    </p>
+    <p>
+      Como parámetros de la función podemos indicar su tamaño y orientación.
+    </p>
+    <h3>Circle</h3>
+    <p>Por lo menos debe recibir un valor para su tamaño. tamaño</p>
+    <article class="card clip-path-circle">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h3>Ellipse</h3>
+    <p>
+      Dos valores, el primero para "x" y el segundo para "y". Si no le damos
+      ninguno tomará el valor por defecto.
+    </p>
+    <article class="card clip-path-ellipse">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h3>Inset</h3>
+    <p>
+      Este debe recibir obligatoriamente al menos un valor, que será por donde
+      recortará la mascara. Primer valor top y bottom, segundo valor para los
+      lados, y así sucesivamente como en el modelo de cajas.
+    </p>
+    <p>
+      Podemos redondear además las esquinas con round y el tamaño a redondear.
+    </p>
+    <article class="card clip-path-inset">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <h3>Polygon</h3>
+    <p>
+      Necesita valores obligatoriamente para darle forma al polígono, Recibe
+      pares de valores (x,y).
+    </p>
+    <article class="card clip-path-polygon">
+      <img src="assets/multimedia/puesta-sol.jpg" alt="Puesta de sol" />
+    </article>
+    <p>
+      Pentágono realizado con las coordenadas de la página CSS clip-path maker.
+    </p>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
+    <h2 id="shape">Formas</h2>
+    <p>
+      Esta propiedad da forma y combina el texto y las imagenes haciendo que
+      estos fluyan entre si.
+    </p>
+    <p>Recibe las mismas funciones que enmascaramiento.</p>
+    <article class="shapes">
+      <h3>Ejemplos de siluetas entre texto e imagenes</h3>
+      <img
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-left shape-1"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <img
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-right shape-2"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        impedit sequi, unde reiciendis eaque consequatur? Sed, impedit quasi
+        ipsum aut dicta fugiat eos nemo perspiciatis consequuntur eveniet fugit,
+        nostrum possimus.
+      </p>
+      <img
+        src="assets/multimedia/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-left shape-3"
+      />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex accusantium
+        neque praesentium voluptatem animi! Consectetur beatae ullam minus nisi
+        consequatur, expedita et dignissimos vel esse ipsa. Qui nesciunt magni
+        corrupti.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex accusantium
+        neque praesentium voluptatem animi! Consectetur beatae ullam minus nisi
+        consequatur, expedita et dignissimos vel esse ipsa. Qui nesciunt magni
+        corrupti.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex accusantium
+        neque praesentium voluptatem animi! Consectetur beatae ullam minus nisi
+        consequatur, expedita et dignissimos vel esse ipsa. Qui nesciunt magni
+        corrupti.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex accusantium
+        neque praesentium voluptatem animi! Consectetur beatae ullam minus nisi
+        consequatur, expedita et dignissimos vel esse ipsa. Qui nesciunt magni
+        corrupti.
+      </p>
+    </article>
+    <a href="visual-effects.html#inicio">Inicio</a>
+    <hr />
     <a href="index.html#inicio">🚀</a>
     <hr />
   </body>
